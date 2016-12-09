@@ -1,2 +1,7 @@
 # marathonSplit
-A Pebble project to help you hit a desired time in a marathon
+
+![screenshot](main.png)
+
+This app is used to help you hit a goal time in a marathon,
+not by using GPS, but by tracking when you pass mile markers
+and comparing against a plan.
