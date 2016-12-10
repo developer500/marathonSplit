@@ -60,8 +60,6 @@ static struct vec pointerOffset[QUADRANTS];
 #define POINTER_LEN 10
 #define POINTER_WID 12
 
-#define NUM_LAYERS 11
-
 typedef struct {
   Layer* layer;
   char *res;
@@ -79,14 +77,17 @@ typedef struct {
 #define PROJECTED_LAYER_INDEX 2
 #define NEXT_LAP_PACE_INDEX 3
 
-#define POINTER_LAYER 8
-#define ACTION_BAR_LAYER 9
-#define LAP_TIMES_LAYER_INDEX 10
+#define POINTER_LAYER 10
+#define ACTION_BAR_LAYER (POINTER_LAYER + 1)
+#define LAP_TIMES_LAYER_INDEX (POINTER_LAYER + 2)
+#define NUM_LAYERS (POINTER_LAYER + 3)
 
 #define MAIN_WINDOW_INDEX 0
 #define PROJECTED_WINDOW_INDEX 1
 #define LAP_TIMES_WINDOW_INDEX 2
 #define YES_NO_WINDOW_INDEX 3
+#define DATA_RECEIVED_WINDOW_INDEX 4
+#define INVALID_STATE_WINDOW_INDEX 5
 
 typedef struct {
   Window* window;
@@ -94,15 +95,17 @@ typedef struct {
 } WindowStore;
 
 static void main_click_config_provider(void* context);
-static void projected_click_config_provider(void* context) {}
+static void empty_click_config_provider(void* context) {}
 static void lap_times_click_config_provider(void* context);
 static void yes_no_click_config_provider(void* context);
 
-static WindowStore windowStores[YES_NO_WINDOW_INDEX+1] = {
+static WindowStore windowStores[INVALID_STATE_WINDOW_INDEX+1] = {
   {NULL, &main_click_config_provider},
-  {NULL, &projected_click_config_provider},
+  {NULL, &empty_click_config_provider},
   {NULL, &lap_times_click_config_provider},
   {NULL, &yes_no_click_config_provider},
+  {NULL, &empty_click_config_provider},
+  {NULL, &empty_click_config_provider},
 };
 
 #define TYPE_TEXT 0
@@ -118,6 +121,8 @@ static LayerStore layerStores[NUM_LAYERS] = {
     { NULL, FONT_KEY_GOTHIC_18, 21, 9, 16, MAIN_WINDOW_INDEX, false, "Laps remaining", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 5, 64, PROJECTED_WINDOW_INDEX, false, "Project finish", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 37, 64, PROJECTED_WINDOW_INDEX, false, "Next Lap Pace", TYPE_TEXT},
+    { NULL, FONT_KEY_GOTHIC_18, 21, 3, 32, DATA_RECEIVED_WINDOW_INDEX, false, "Data Received", TYPE_TEXT},
+    { NULL, FONT_KEY_GOTHIC_18, 21, 3, 32, INVALID_STATE_WINDOW_INDEX, false, "Must be reset", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 0, 0, 0, MAIN_WINDOW_INDEX, false, "", TYPE_POINTER},
     { NULL, FONT_KEY_GOTHIC_18, 0, 0, 0, MAIN_WINDOW_INDEX, false, "", TYPE_ACTION_BAR},
     { NULL, FONT_KEY_GOTHIC_18, 0, 0, 0, MAIN_WINDOW_INDEX, false, "", TYPE_ACTION_BAR},
@@ -171,7 +176,10 @@ static void handleBuzz(time_t inDisplayTime) {
 
 static void showBandAndCountdownTH(time_tds inCurrentTime) {
   
-  if (window_stack_contains_window(windowStores[PROJECTED_WINDOW_INDEX].window)) {
+  if ((window_stack_contains_window(windowStores[PROJECTED_WINDOW_INDEX].window)) || 
+      (window_stack_contains_window(windowStores[DATA_RECEIVED_WINDOW_INDEX].window)) ||
+      (window_stack_contains_window(windowStores[INVALID_STATE_WINDOW_INDEX].window)))
+  {
     if ((s_revertToDisplay==0) || (inCurrentTime >= s_revertToDisplay)) {
       window_stack_pop(true);
       return;
@@ -486,6 +494,26 @@ static void main_window_load(Window* window) {
   }
 }
 
+static void data_received_window_load(Window* window) {
+  
+  GColor backColor =  s_blackBackground ? GColorBlack : GColorWhite;
+  GColor foreColor = s_blackBackground ? GColorWhite : GColorBlack;
+
+  window_set_background_color(window, backColor);
+
+  addTextLayers(DATA_RECEIVED_WINDOW_INDEX);
+}
+
+static void invalid_state_window_load(Window* window) {
+  
+  GColor backColor =  s_blackBackground ? GColorBlack : GColorWhite;
+  GColor foreColor = s_blackBackground ? GColorWhite : GColorBlack;
+
+  window_set_background_color(window, backColor);
+
+  addTextLayers(INVALID_STATE_WINDOW_INDEX);
+}
+
 static void projected_window_load(Window* window) {
   
   GColor backColor =  s_blackBackground ? GColorBlack : GColorWhite;
@@ -550,7 +578,7 @@ static void window_unload(Window * inWindow) {
 
 static void init() {
   
-  for (int windowIndex = 0 ; windowIndex <= YES_NO_WINDOW_INDEX  ; windowIndex++) {
+  for (int windowIndex = 0 ; windowIndex <= INVALID_STATE_WINDOW_INDEX ; windowIndex++) {
     windowStores[windowIndex].window = window_create();
   }
 
@@ -574,6 +602,16 @@ static void init() {
   window_set_window_handlers(windowStores[YES_NO_WINDOW_INDEX].window, (WindowHandlers) {
     .load =
       dialog_choice_window_load, .unload = dialog_choice_window_unload
+  });
+  
+  window_set_window_handlers(windowStores[DATA_RECEIVED_WINDOW_INDEX].window, (WindowHandlers) {
+    .load =
+      data_received_window_load, .unload = window_unload
+  });
+  
+  window_set_window_handlers(windowStores[INVALID_STATE_WINDOW_INDEX].window, (WindowHandlers) {
+    .load =
+      invalid_state_window_load, .unload = window_unload
   });
  
   // Show the Window on the watch, with animated=true

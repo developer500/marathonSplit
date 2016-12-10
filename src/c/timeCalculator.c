@@ -33,8 +33,8 @@ static time_tds s_actualTimes[MAX_BANDS];
 // };
 
 
-static int s_countDownBands = 1;
-static time_tds s_countDownBand[MAX_BANDS] = {110};
+static int s_countDownBands = 3;
+static time_tds s_countDownBand[MAX_BANDS] = {150, 150, 150};
 
 // static int s_countDownBands = 19;
 // static time_tds s_countDownBand[MAX_BANDS] = {

@@ -11,20 +11,14 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/tick.png",
+                    "name": "TICK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/play.png",
                     "name": "PLAY",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/info.png",
-                    "name": "INFO",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/next.png",
-                    "name": "NEXT",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -35,14 +29,20 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/cross.png",
-                    "name": "CROSS",
+                    "file": "images/next.png",
+                    "name": "NEXT",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/tick.png",
-                    "name": "TICK",
+                    "file": "images/info.png",
+                    "name": "INFO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/cross.png",
+                    "name": "CROSS",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
