@@ -34,23 +34,23 @@ static time_tds s_actualTimes[MAX_BANDS];
 // };
 
 
-// static int s_countDownBands = 27;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  4800, 4800, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 930
-// };
+ static int s_countDownBands = 27;
+ static time_tds s_countDownBand[MAX_BANDS] = {
+  4800, 4800, 4630, 4630,
+  4630, 4630, 4630, 4630,
+  4630, 4630, 4630, 4630,
+  4630, 4630, 4630, 4630,
+  4630, 4630, 4630, 4630,
+  4630, 4630, 4630, 4630,
+  4630, 4630, 930
+ };
 
 
 // static int s_countDownBands = 3;
 // static time_tds s_countDownBand[MAX_BANDS] = {150, 150, 150};
 
-static int s_countDownBands = 10;
-static time_tds s_countDownBand[MAX_BANDS] = {10,10,10,10,10,10,10,10,10,10};
+//static int s_countDownBands = 10;
+//static time_tds s_countDownBand[MAX_BANDS] = {10,10,10,10,10,10,10,10,10,10};
 
 // static int s_countDownBands = 48;
 // static time_tds s_countDownBand[MAX_BANDS] = {

@@ -88,6 +88,7 @@ typedef struct {
 #define YES_NO_WINDOW_INDEX 3
 #define DATA_RECEIVED_WINDOW_INDEX 4
 #define INVALID_STATE_WINDOW_INDEX 5
+#define NUM_WINDOWS (INVALID_STATE_WINDOW_INDEX + 1)
 
 static void main_click_config_provider(void* context);
 static void empty_click_config_provider(void* context) {}
@@ -99,7 +100,7 @@ typedef struct {
   void (*click_provider)(void* context);
 } WindowStore;
 
-static WindowStore windowStores[INVALID_STATE_WINDOW_INDEX+1] = {
+static WindowStore windowStores[NUM_WINDOWS] = {
   {NULL, &main_click_config_provider},
   {NULL, &empty_click_config_provider},
   {NULL, &lap_times_click_config_provider},
@@ -119,7 +120,7 @@ static LayerStore layerStores[NUM_LAYERS] = {
     { NULL, FONT_KEY_ROBOTO_BOLD_SUBSET_49, 49, 3, 4, PROJECTED_WINDOW_INDEX, true, "00:00", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 3, 32, MAIN_WINDOW_INDEX, false, "Sec this lap", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 9, 16, MAIN_WINDOW_INDEX, false, "Laps remaining", TYPE_TEXT},
-    { NULL, FONT_KEY_GOTHIC_18, 21, 5, 64, PROJECTED_WINDOW_INDEX, false, "Project finish", TYPE_TEXT},
+    { NULL, FONT_KEY_GOTHIC_18, 21, 5, 64, PROJECTED_WINDOW_INDEX, false, "Projected finish", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 37, 64, PROJECTED_WINDOW_INDEX, false, "Next Lap Pace", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 3, 32, DATA_RECEIVED_WINDOW_INDEX, false, "Data Received", TYPE_TEXT},
     { NULL, FONT_KEY_GOTHIC_18, 21, 3, 32, INVALID_STATE_WINDOW_INDEX, false, "Must be reset", TYPE_TEXT},
@@ -134,6 +135,7 @@ static GBitmap *s_empty_bitmap, *s_play_bitmap, *s_pause_bitmap, *s_next_bitmap,
 #define RUNNING_STATE 1
 #define PAUSED_STATE 2
 #define FINISHED_STATE 3
+
 #define BUTTONS_DEFINED 3
 
 typedef struct {
@@ -147,11 +149,11 @@ static void setPausedCP(time_tds inCurrentTime);
 static void resetPausedCP(time_tds inCurrentTime);
 static void clearDataCP(time_tds inCurrentTime);
 static void runningStartCP(time_tds inCurrentTime);
-static void settingsCP(time_tds inCurrentTime);
+static void plannedCP(time_tds inCurrentTime);
 
 static Sub_Click_Provider sub_click_providers[(FINISHED_STATE+1)*BUTTONS_DEFINED] = {
   //               up                              center                           down
-  /*initial */ {&s_settings_bitmap, &settingsCP},        {&s_empty_bitmap, &emptyCP},     {&s_play_bitmap, &initialStartCP},
+  /*initial */ {&s_settings_bitmap, &plannedCP},  {&s_empty_bitmap, &emptyCP},     {&s_play_bitmap, &initialStartCP},
   /*running */ {&s_pause_bitmap, &setPausedCP},    {&s_empty_bitmap, &emptyCP},     {&s_next_bitmap, &runningStartCP},
   /*paused  */ {&s_empty_bitmap, &emptyCP},        {&s_cross_bitmap, &clearDataCP}, {&s_play_bitmap, &resetPausedCP},
   /*finished*/ {&s_empty_bitmap, &emptyCP},        {&s_cross_bitmap, &clearDataCP}, {&s_info_bitmap, &runningStartCP},
@@ -238,7 +240,7 @@ static void changeDisplayProjectedFinish(time_tds inCurrentTime) {
   s_revertToDisplay = inCurrentTime + (time_tds)80;
 }
 
-static void changeDisplayLapTimes(time_tds inCurrentTime) {
+static void changeDisplayPlannedOrActualTimes(time_tds inCurrentTime) {
 
   time_tds plannedTime[MAX_BANDS];
   time_tds actualTime[MAX_BANDS];
@@ -252,6 +254,18 @@ static void changeDisplayLapTimes(time_tds inCurrentTime) {
   setTimes(plannedTime, actualTime, numberBands);
   
   main_window_stack_push(LAP_TIMES_WINDOW_INDEX);
+}
+
+static void changeDisplayPlannedTimes(time_tds inCurrentTime) {
+
+	setShowPlannedTimes();
+	changeDisplayPlannedOrActualTimes(inCurrentTime);
+}
+
+static void changeDisplayActualTimes(time_tds inCurrentTime) {
+
+	setShowActualTimes();
+	changeDisplayPlannedOrActualTimes(inCurrentTime);
 }
 
 static void set_action_icons(int inSystemState) {
@@ -280,8 +294,8 @@ static void resetPausedCP(time_tds inCurrentTime) {
   set_action_icons(RUNNING_STATE);
 }
 
-static void settingsCP(time_tds inCurrentTime) {
-    changeDisplayLapTimes(inCurrentTime);
+static void plannedCP(time_tds inCurrentTime) {
+	changeDisplayPlannedTimes(inCurrentTime);
 }
 
 static void runningStartCP(time_tds inCurrentTime) {
@@ -292,7 +306,7 @@ static void runningStartCP(time_tds inCurrentTime) {
   if (!finished) {
     changeDisplayProjectedFinish(inCurrentTime);
   } else {
-    changeDisplayLapTimes(inCurrentTime);
+	changeDisplayActualTimes(inCurrentTime);
     set_action_icons(FINISHED_STATE);
   }
 }

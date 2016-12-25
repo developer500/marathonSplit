@@ -6,12 +6,22 @@
 
 static MenuLayer *s_menu_layer = 0;
 
+static bool s_showActualTines;
+
 static int s_numTimes;
 static time_t s_plannedTotalTime;
 static time_t s_actualTotalTime;
 
 static time_t s_plannedTime[MAX_BANDS];
 static time_t s_actualTime[MAX_BANDS];
+
+
+void setShowActualTimes() {
+	s_showActualTines = true;
+}
+void setShowPlannedTimes() {
+	s_showActualTines = false;
+}
 
 static uint16_t menu_get_num_sections_callback(MenuLayer *menu_layer, void *data) {
   return NUM_MENU_SECTIONS;
@@ -44,7 +54,7 @@ static void menu_draw_header_callback(GContext* ctx, const Layer *cell_layer, ui
       menu_cell_basic_header_draw(ctx, cell_layer, "Total Time");
       break;
     case 1:
-      menu_cell_basic_header_draw(ctx, cell_layer, "Split Times");
+      menu_cell_basic_header_draw(ctx, cell_layer, s_showActualTines ? "Split Times" : "Planned Lap Times");
       break;
   }
 }
@@ -135,11 +145,14 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
         case 0: {
         
           // This is a basic menu item with a title and subtitle
-          char * mainBufferP = mainBuffer + getTimeFromTimeT(s_actualTotalTime, false, mainBuffer);
-          strcpy(mainBufferP, "   ");
-          mainBufferP+=3;
-        
-          getTimeFromTimeT((s_actualTotalTime - s_plannedTotalTime), true, mainBufferP);
+          char * mainBufferP = mainBuffer + getTimeFromTimeT(s_showActualTines ? s_actualTotalTime : s_plannedTotalTime, false, mainBuffer);
+
+          if (s_showActualTines) {
+              strcpy(mainBufferP, "   ");
+              mainBufferP+=3;
+
+              getTimeFromTimeT((s_actualTotalTime - s_plannedTotalTime), true, mainBufferP);
+          }
 
           menu_cell_basic_draw(ctx, cell_layer, mainBuffer, NULL, NULL);
           break;
@@ -149,13 +162,19 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
     case 1:
      {
         char * mainBufferP = mainBuffer + snprintf(mainBuffer, sizeof(mainBuffer), "%d)  ", cell_index->row + 1);
-        mainBufferP += getTimeFromTimeT(s_actualTime[cell_index->row], false, mainBufferP);
-       
+
+        mainBufferP += getTimeFromTimeT(s_showActualTines ? s_actualTime[cell_index->row] : s_plannedTime[cell_index->row], false, mainBufferP);
+
         strcpy(mainBufferP, "   ");
         mainBufferP+=3;
-         
-        getTimeFromTimeT(s_actualTime[cell_index->row] - s_plannedTime[cell_index->row]
-          , true, mainBufferP);
+
+        if (s_showActualTines) {
+            getTimeFromTimeT(s_actualTime[cell_index->row] - s_plannedTime[cell_index->row]
+              , true, mainBufferP);
+        } else {
+        	snprintf(mainBufferP, 4, "%d", (int)(s_plannedTime[cell_index->row]/10));
+        }
+
 
         menu_cell_basic_draw(ctx, cell_layer, mainBuffer, NULL, NULL);
      }

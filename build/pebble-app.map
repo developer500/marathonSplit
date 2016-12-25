@@ -1,0 +1,1926 @@
+Archive member included because of file (symbol)
+
+/Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                              src/c/main.c.25.o (app_event_loop)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .init          0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .fini          0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .text          0x0000000000000000       0xc8 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .bss           0x0000000000000000       0x1c /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .init_array    0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .fini_array    0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .eh_frame      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .jcr           0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .tm_clone_table
+                0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .text          0x0000000000000000        0x0 src/c/constants.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/constants.c.25.o
+ .text          0x0000000000000000        0x0 src/c/dialog_choice_window.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/dialog_choice_window.c.25.o
+ .text          0x0000000000000000        0x0 src/c/main.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/main.c.25.o
+ .text          0x0000000000000000        0x0 src/c/menuHandler.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/menuHandler.c.25.o
+ .text          0x0000000000000000        0x0 src/c/testDetails.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/testDetails.c.25.o
+ .text.basicStartStopTest
+                0x0000000000000000       0xb0 src/c/testDetails.c.25.o
+ .text.testPaused
+                0x0000000000000000       0xa4 src/c/testDetails.c.25.o
+ .text.testReset
+                0x0000000000000000      0x108 src/c/testDetails.c.25.o
+ .text.testFinish
+                0x0000000000000000       0x88 src/c/testDetails.c.25.o
+ .text.testFinishRound2
+                0x0000000000000000       0x8c src/c/testDetails.c.25.o
+ .text.testProjectedFinish
+                0x0000000000000000       0x88 src/c/testDetails.c.25.o
+ .text.testProjectedFinish2
+                0x0000000000000000       0x70 src/c/testDetails.c.25.o
+ .text.testProjectedFinish3
+                0x0000000000000000       0x5c src/c/testDetails.c.25.o
+ .text.testCurrentReplannedLapTime
+                0x0000000000000000       0x88 src/c/testDetails.c.25.o
+ .text.testCurrentReplannedLapTime2
+                0x0000000000000000       0x5c src/c/testDetails.c.25.o
+ .text.testCurrentReplannedLapTime3
+                0x0000000000000000       0x60 src/c/testDetails.c.25.o
+ .text.testDisplayMessage
+                0x0000000000000000       0x40 src/c/testDetails.c.25.o
+ .text.testRecordingSplitTimes
+                0x0000000000000000       0x98 src/c/testDetails.c.25.o
+ .text.testRecordingSplitTimes2
+                0x0000000000000000       0xe4 src/c/testDetails.c.25.o
+ .text.testGetTimeStrings
+                0x0000000000000000       0x74 src/c/testDetails.c.25.o
+ .text.testExisting
+                0x0000000000000000        0x4 src/c/testDetails.c.25.o
+ .text.testTimeCalculator
+                0x0000000000000000        0x4 src/c/testDetails.c.25.o
+ .rodata        0x0000000000000000       0xc8 src/c/testDetails.c.25.o
+ .text          0x0000000000000000        0x0 src/c/testMain.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/testMain.c.25.o
+ .text          0x0000000000000000        0x0 src/c/timeCalculator.c.25.o
+ .bss           0x0000000000000000        0x0 src/c/timeCalculator.c.25.o
+ .text.setCountDownBands
+                0x0000000000000000       0x28 src/c/timeCalculator.c.25.o
+ .text.setLastBandPercentOfMax
+                0x0000000000000000        0xc src/c/timeCalculator.c.25.o
+ .text.getIsStarted
+                0x0000000000000000       0x14 src/c/timeCalculator.c.25.o
+ .text.setPaused
+                0x0000000000000000        0xc src/c/timeCalculator.c.25.o
+ .text.clearPaused
+                0x0000000000000000       0x10 src/c/timeCalculator.c.25.o
+ .text.getTimeDiffFromPlanned
+                0x0000000000000000       0x18 src/c/timeCalculator.c.25.o
+ .text.getCurrentRePlannedLapTime
+                0x0000000000000000       0x74 src/c/timeCalculator.c.25.o
+ .text.getTotalTime
+                0x0000000000000000       0x14 src/c/timeCalculator.c.25.o
+ .text          0x0000000000000000        0x0 aplite/appinfo.auto.c.25.o
+ .bss           0x0000000000000000        0x0 aplite/appinfo.auto.c.25.o
+ .text          0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.25.o
+ .bss           0x0000000000000000        0x0 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_CROSS
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_NEXT
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_INFO
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_SETTINGS
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_PAUSE
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_CONFIRM
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_PLAY
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .data.RESOURCE_ID_TICK
+                0x0000000000000000        0x4 aplite/src/resource_ids.auto.c.25.o
+ .bss           0x0000000000000000        0x0 /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_data_service_subscribe__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_data_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_service_peek
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_service_set_samples_per_update
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_service_set_sampling_rate
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_tap_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_tap_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_add_to_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_clear_icon
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_remove_from_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_set_background_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_set_click_config_provider
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_set_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_legacy2_set_icon
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_get_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_is_scheduled
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_schedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_delay
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_handlers
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_implementation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_unschedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_unschedule_all
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_comm_get_sniff_interval
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_comm_set_sniff_interval
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_deregister_callbacks
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_open
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_sync_deinit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_sync_get
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_sync_init
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_sync_set
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_timer_cancel
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_timer_register
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_timer_reschedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.atan2_lookup
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.atoi     0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.atol     0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.battery_state_service_peek
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.battery_state_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.battery_state_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bitmap_layer_set_alignment
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bitmap_layer_set_background_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bluetooth_connection_service_peek
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bluetooth_connection_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bluetooth_connection_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.click_number_of_clicks_counted
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.click_recognizer_get_button_id
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.clock_copy_time_string
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.clock_is_24h_style
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.cos_lookup
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.data_logging_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.data_logging_finish
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.data_logging_log
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_calc_buffer_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_calc_buffer_size_from_tuplets
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_find
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_merge
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_read_begin_from_buffer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_read_first
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_read_next
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_serialize_tuplets
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_serialize_tuplets_to_buffer__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_serialize_tuplets_to_buffer_with_iter
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_begin
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_cstring
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_end
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_int
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_int16
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_int32
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_int8
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_tuplet
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_uint16
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_uint32
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_write_uint8
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.fonts_load_custom_font
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.fonts_unload_custom_font
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.free     0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_as_sub_bitmap
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_with_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_draw_filled_legacy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_draw_outline
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_move_to
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_rotate_to
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpoint_equal
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_compositing_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_fill_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_stroke_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_text_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_bitmap_in_rect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_circle
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_pixel
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_rect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_round_rect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_fill_rect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_layout_get_max_used_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_align
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_center_point
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_clip
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_contains_point
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_crop
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_equal
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_is_empty
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_standardize
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gsize_equal
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.inverter_layer_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.inverter_layer_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.inverter_layer_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_create_with_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_get_clips
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_get_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_get_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_get_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_insert_above_sibling
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_insert_below_sibling
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_mark_dirty
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_remove_child_layers
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_remove_from_parent
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_set_bounds
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_set_clips
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_set_frame
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_set_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.light_enable
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.light_enable_interaction
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.localtime__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.malloc   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.memcpy   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.memmove  0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_cell_title_draw
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_index_compare
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_legacy2_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_get_scroll_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_get_selected_index
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_reload_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_legacy2_set_callbacks__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_set_selected_index
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_set_selected_next
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_get_value
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_set_label
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_set_max
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_set_min
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_set_step_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_set_value
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_delete
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_exists
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_get_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_bool
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_data__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_int
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_string__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_write_bool
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_write_data__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_write_int
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_write_string
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_create_layer_frame
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_update_gpoint
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_update_grect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_legacy2_update_int16
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.psleep   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rand     0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.resource_get_handle
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.resource_load
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.resource_load_byte_range
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.resource_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_increment_angle
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_set_angle
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_set_corner_clip_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_set_compositing_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_set_src_ic
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_add_child
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_content_offset
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_content_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_shadow_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_scroll_down_click_handler
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_scroll_up_click_handler
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_callbacks
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_click_config_onto_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_content_offset
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_content_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_frame
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_shadow_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_get_selected_index
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_set_selected_index
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.sin_lookup
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.srand    0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strcat   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strcmp   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strlen   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strncat  0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strncmp  0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.strncpy  0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_get_content_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_get_text
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_background_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_font
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_overflow_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_text
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_text_alignment
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_legacy2_set_text_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.tick_timer_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.time__deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.time_ms_deprecated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.vibes_cancel
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.vibes_double_pulse
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.vibes_enqueue_custom_pattern
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.vibes_long_pulse
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_get_click_config_provider
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_get_fullscreen
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_is_loaded
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_background_color_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_click_config_provider_with_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_fullscreen
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_status_bar_icon
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_stack_pop_all
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_stack_remove
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_focus_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_focus_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_get_user_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_user_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_get_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_inbox_size_maximum
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_outbox_begin
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_outbox_send
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_outbox_size_maximum
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_register_inbox_dropped
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_register_inbox_received
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_register_outbox_failed
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_register_outbox_sent
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_message_set_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_multi_click_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_raw_click_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_set_click_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_single_repeating_click_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_text
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_serialize_tuplets_to_buffer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_read_string
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.persist_write_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dict_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_layout_get_content_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.simple_menu_layer_get_menu_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_data_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.calloc   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bitmap_layer_get_bitmap
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_legacy2_set_callbacks
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.window_get_click_config_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.number_window_get_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.realloc  0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_blank_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.click_recognizer_is_repeating
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.accel_raw_data_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_is_running
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_kill
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_launch
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_message_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_message_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_worker_send_message
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.worker_event_loop
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.worker_launch_app
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.heap_bytes_free
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.heap_bytes_used
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.compass_service_peek
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.compass_service_set_heading_filter
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.compass_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.compass_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.uuid_equal
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.uuid_to_string
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_draw_filled
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_legacy2_set_custom_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.watch_info_get_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.watch_info_get_firmware_version
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.watch_info_get_model
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_capture_frame_buffer_2bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_frame_buffer_is_captured
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_release_frame_buffer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.clock_to_timestamp
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.launch_reason
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_cancel
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_cancel_all
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_get_launch_event
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_query
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_schedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.wakeup_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.clock_is_timezone_set
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.i18n_get_system_locale
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text._localeconv_r
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.setlocale
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.mktime   0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gcolor_equal
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.__profiler_init
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.__profiler_print_stats
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.__profiler_start
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.__profiler_stop
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.bitmap_layer_set_background_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_text_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.rot_bitmap_layer_set_corner_clip_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.clock_get_timezone
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.localtime
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_is_scheduled
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_schedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_custom_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_delay
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_handlers
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_implementation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_unschedule
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_unschedule_all
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_blank
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_capture_frame_buffer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_capture_frame_buffer_format
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_create_layer_frame
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_from
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_get_animation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_subject
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_to
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_update_gpoint
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_update_grect
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_update_int16
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_blank_with_palette
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_bounds
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_bytes_per_row
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_format
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_palette
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_set_bounds
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_set_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_set_palette
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_create_with_resource
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_get_bitmap_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_get_current_frame_idx
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_get_total_num_frames
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_update_bitmap_next_frame
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_from_png_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_clone
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_delay
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_elapsed
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_reverse
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_sequence_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_sequence_create_from_array
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_elapsed
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_set_reverse
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_spawn_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_spawn_create_from_array
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_custom_curve
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.animation_get_implementation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.launch_get_args
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_get_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_restart
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_set_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_antialiased
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_context_set_stroke_width
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_clear_icon
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_remove_from_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_set_background_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_set_click_config_provider
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_set_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_set_icon_animated
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_sequence_update_bitmap_by_elapsed
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_create_palettized_from_1bit
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_cell_layer_is_highlighted
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_rotated_bitmap
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_bar_layer_set_icon_press_animation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_get_content_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_get_text
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_set_overflow_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_set_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_draw
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_frame_draw
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_frame_get_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_frame_set_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_fill_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_num_points
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_path_open
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_point
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_radius
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_stroke_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_stroke_width
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_get_type
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_clone
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_create_with_resource
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_draw
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_get_bounds_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_get_command_list
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_image_set_bounds_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_list_draw
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_list_get_command
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_list_get_num_commands
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_list_iterate
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_clone
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_create_with_resource
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_bounds_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_frame_by_elapsed
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_frame_by_index
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_num_frames
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_get_total_duration
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_set_bounds_size
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_sequence_set_play_count
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_fill_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_hidden
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_path_open
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_point
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_radius
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_stroke_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_set_stroke_width
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_create_bounds_origin
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_update_uint32
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpath_draw_outline_open
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_set_highlight_colors
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_pad_bottom_enable
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_get_background_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_get_foreground_color
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_get_layer
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_set_colors
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.status_bar_layer_set_separator_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.difftime
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gcolor_legible_over
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.property_animation_update_gcolor8
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.app_focus_service_subscribe_handlers
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_close
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_freeze
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_get_context
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_get_root_level
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_hierarchy_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_item_get_action_data
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_item_get_label
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_level_add_action
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_level_add_child
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_level_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_level_set_display_mode
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_open
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_set_result_window
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.action_menu_unfreeze
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_enable_confirmation
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_start
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_stop
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_begin_write
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_end_write
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_get_attribute_id
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_get_service_id
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_attribute_read
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_service_is_available
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_set_timeout
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.smartstrap_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.connection_service_peek_pebble_app_connection
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.connection_service_peek_pebblekit_connection
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.connection_service_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.connection_service_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.dictation_session_enable_error_dialogs
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gbitmap_get_data_row_info
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.content_indicator_configure_direction
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.content_indicator_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.content_indicator_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.content_indicator_get_content_available
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.content_indicator_set_content_available
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_content_indicator
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_get_center_focused
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_set_center_focused
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gpoint_from_polar
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_arc
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_fill_radial
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.grect_centered_from_polar
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_create
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_destroy
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_enable_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_enable_screen_text_flow
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_restore_default_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_attributes_restore_default_text_flow
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_text_layout_get_content_size_with_attributes
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_convert_point_to_screen
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.layer_convert_rect_to_screen
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_get_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.scroll_layer_set_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_enable_screen_text_flow_and_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.text_layer_restore_default_text_flow_and_paging
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.menu_layer_is_index_selected
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_activities_iterate
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_any_activity_accessible
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_events_subscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_events_unsubscribe
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_get_minute_history
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_metric_accessible
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_peek_current_activities
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_sum
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_sum_today
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.time_start_of_today
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_metric_averaged_accessible
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_sum_averaged
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.health_service_get_measurement_system_for_display
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.gdraw_command_frame_get_command_list
+                0x0000000000000000        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .jcr           0x0000000000000000        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .tm_clone_table
+                0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .init          0x0000000000000000        0x8 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .fini          0x0000000000000000        0x8 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+APP              0x0000000000000000 0x0000000000006000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+LOAD src/c/constants.c.25.o
+LOAD src/c/dialog_choice_window.c.25.o
+LOAD src/c/main.c.25.o
+LOAD src/c/menuHandler.c.25.o
+LOAD src/c/testDetails.c.25.o
+LOAD src/c/testMain.c.25.o
+LOAD src/c/timeCalculator.c.25.o
+LOAD aplite/appinfo.auto.c.25.o
+LOAD aplite/src/resource_ids.auto.c.25.o
+LOAD /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a
+START GROUP
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/../../../../arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+
+.header         0x0000000000000000       0x82
+ *(.pbl_header)
+ .pbl_header    0x0000000000000000       0x82 aplite/appinfo.auto.c.25.o
+                0x0000000000000000                __pbl_app_info
+
+.note.gnu.build-id
+                0x0000000000000082       0x26
+                0x0000000000000082                PROVIDE (BUILD_ID, .)
+ *(.note.gnu.build-id)
+ *fill*         0x0000000000000082        0x2 
+ .note.gnu.build-id
+                0x0000000000000084       0x24 linker stubs
+
+.text           0x00000000000000a8     0x19ff
+ *(.text)
+ .text          0x00000000000000a8       0x14 /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ *(.text.*)
+ .text.getTimeFromDs
+                0x00000000000000bc       0x14 src/c/constants.c.25.o
+                0x00000000000000bc                getTimeFromDs
+ .text.getTimeDsFromTime
+                0x00000000000000d0       0x1c src/c/constants.c.25.o
+                0x00000000000000d0                getTimeDsFromTime
+ .text.getTimeDs
+                0x00000000000000ec       0x1e src/c/constants.c.25.o
+                0x00000000000000ec                getTimeDs
+ *fill*         0x000000000000010a        0x2 
+ .text.dialog_choice_window_load
+                0x000000000000010c      0x134 src/c/dialog_choice_window.c.25.o
+                0x000000000000010c                dialog_choice_window_load
+ .text.dialog_choice_window_unload
+                0x0000000000000240       0x5c src/c/dialog_choice_window.c.25.o
+                0x0000000000000240                dialog_choice_window_unload
+ .text.empty_click_config_provider
+                0x000000000000029c        0x2 src/c/main.c.25.o
+ .text.emptyCP  0x000000000000029e        0x2 src/c/main.c.25.o
+ .text.empty_click_handler
+                0x00000000000002a0        0x2 src/c/main.c.25.o
+ *fill*         0x00000000000002a2        0x2 
+ .text.yes_no_click_config_provider
+                0x00000000000002a4       0x24 src/c/main.c.25.o
+ .text.lap_times_click_config_provider
+                0x00000000000002c8       0x10 src/c/main.c.25.o
+ .text.yes_no_down_click_handler
+                0x00000000000002d8        0x6 src/c/main.c.25.o
+ *fill*         0x00000000000002de        0x2 
+ .text.select_click_handler
+                0x00000000000002e0       0x14 src/c/main.c.25.o
+ .text.main_down_click_handler
+                0x00000000000002f4       0x14 src/c/main.c.25.o
+ .text.main_up_click_handler
+                0x0000000000000308       0x14 src/c/main.c.25.o
+ .text.tick_handler
+                0x000000000000031c       0x14 src/c/main.c.25.o
+ .text.main_click_config_provider
+                0x0000000000000330       0x44 src/c/main.c.25.o
+ .text.set_action_icons
+                0x0000000000000374       0x88 src/c/main.c.25.o
+ .text.yes_no_up_click_handler
+                0x00000000000003fc       0x30 src/c/main.c.25.o
+ .text.resetPausedCP
+                0x000000000000042c       0x10 src/c/main.c.25.o
+ .text.setPausedCP
+                0x000000000000043c       0x10 src/c/main.c.25.o
+ .text.initialStartCP
+                0x000000000000044c       0x10 src/c/main.c.25.o
+ .text.addTextLayers
+                0x000000000000045c      0x10c src/c/main.c.25.o
+ .text.invalid_state_window_load
+                0x0000000000000568       0x14 src/c/main.c.25.o
+ .text.data_received_window_load
+                0x000000000000057c       0x14 src/c/main.c.25.o
+ .text.lapTimes_window_load
+                0x0000000000000590       0x20 src/c/main.c.25.o
+ .text.projected_window_load
+                0x00000000000005b0       0xa4 src/c/main.c.25.o
+ .text.main_window_load
+                0x0000000000000654      0x1a8 src/c/main.c.25.o
+ .text.singleBuzz
+                0x00000000000007fc        0x4 src/c/main.c.25.o
+ .text.drawSingleLine
+                0x0000000000000800       0x54 src/c/main.c.25.o
+ .text.pointer_layer_update_callback
+                0x0000000000000854       0x90 src/c/main.c.25.o
+                0x0000000000000854                pointer_layer_update_callback
+ .text.main_window_stack_push
+                0x00000000000008e4       0x30 src/c/main.c.25.o
+ .text.clearDataCP
+                0x0000000000000914        0x6 src/c/main.c.25.o
+ .text.changeDisplayPlannedOrActualTimes.isra.1
+                0x000000000000091a       0x3e src/c/main.c.25.o
+ .text.runningStartCP
+                0x0000000000000958       0x48 src/c/main.c.25.o
+ .text.plannedCP
+                0x00000000000009a0        0xe src/c/main.c.25.o
+ *fill*         0x00000000000009ae        0x2 
+ .text.showBandAndCountdownTH
+                0x00000000000009b0       0xc8 src/c/main.c.25.o
+ .text.getWindowIndexFromWindow
+                0x0000000000000a78       0x20 src/c/main.c.25.o
+                0x0000000000000a78                getWindowIndexFromWindow
+ .text.window_unload
+                0x0000000000000a98       0x54 src/c/main.c.25.o
+ .text.startup.main
+                0x0000000000000aec      0x160 src/c/main.c.25.o
+                0x0000000000000aec                main
+ .text.menu_get_num_sections_callback
+                0x0000000000000c4c        0x4 src/c/menuHandler.c.25.o
+ .text.menu_get_num_rows_callback
+                0x0000000000000c50       0x1c src/c/menuHandler.c.25.o
+ .text.menu_get_header_height_callback
+                0x0000000000000c6c        0x4 src/c/menuHandler.c.25.o
+ .text.menu_get_cell_height_callback
+                0x0000000000000c70        0x4 src/c/menuHandler.c.25.o
+ .text.menu_select_callback
+                0x0000000000000c74        0x2 src/c/menuHandler.c.25.o
+ *fill*         0x0000000000000c76        0x2 
+ .text.menu_draw_header_callback
+                0x0000000000000c78       0x44 src/c/menuHandler.c.25.o
+ .text.setShowActualTimes
+                0x0000000000000cbc       0x10 src/c/menuHandler.c.25.o
+                0x0000000000000cbc                setShowActualTimes
+ .text.setShowPlannedTimes
+                0x0000000000000ccc       0x10 src/c/menuHandler.c.25.o
+                0x0000000000000ccc                setShowPlannedTimes
+ .text.getTimeFromFormat
+                0x0000000000000cdc       0x78 src/c/menuHandler.c.25.o
+                0x0000000000000cdc                getTimeFromFormat
+ .text.getTimeFromTimeT
+                0x0000000000000d54       0x70 src/c/menuHandler.c.25.o
+                0x0000000000000d54                getTimeFromTimeT
+ .text.menu_draw_row_callback
+                0x0000000000000dc4      0x13c src/c/menuHandler.c.25.o
+ .text.loadMenu
+                0x0000000000000f00       0xbc src/c/menuHandler.c.25.o
+                0x0000000000000f00                loadMenu
+ .text.lapTimes_window_unload
+                0x0000000000000fbc       0x10 src/c/menuHandler.c.25.o
+                0x0000000000000fbc                lapTimes_window_unload
+ .text.setTimes
+                0x0000000000000fcc       0x74 src/c/menuHandler.c.25.o
+                0x0000000000000fcc                setTimes
+ .text.getTimeDeltaFn
+                0x0000000000001040       0x20 src/c/timeCalculator.c.25.o
+                0x0000000000001040                getTimeDeltaFn
+ .text.initialsetStartFn
+                0x0000000000001060       0x34 src/c/timeCalculator.c.25.o
+                0x0000000000001060                initialsetStartFn
+ .text.initialPausedFn
+                0x0000000000001094       0x20 src/c/timeCalculator.c.25.o
+                0x0000000000001094                initialPausedFn
+ .text.clearPausedFn
+                0x00000000000010b4       0x40 src/c/timeCalculator.c.25.o
+                0x00000000000010b4                clearPausedFn
+ .text.getDisplayTimeFn
+                0x00000000000010f4       0x40 src/c/timeCalculator.c.25.o
+                0x00000000000010f4                getDisplayTimeFn
+ .text.getPercentCompleteTimes10Fn
+                0x0000000000001134       0x1c src/c/timeCalculator.c.25.o
+                0x0000000000001134                getPercentCompleteTimes10Fn
+ .text.getCounDownBands
+                0x0000000000001150        0xc src/c/timeCalculator.c.25.o
+                0x0000000000001150                getCounDownBands
+ .text.getTimeForBand
+                0x000000000000115c       0x10 src/c/timeCalculator.c.25.o
+                0x000000000000115c                getTimeForBand
+ .text.getIsPaused
+                0x000000000000116c       0x14 src/c/timeCalculator.c.25.o
+                0x000000000000116c                getIsPaused
+ .text.getElapsedTime
+                0x0000000000001180       0x24 src/c/timeCalculator.c.25.o
+                0x0000000000001180                getElapsedTime
+ .text.getCurrrentBandAndSmallElapsed
+                0x00000000000011a4       0x60 src/c/timeCalculator.c.25.o
+                0x00000000000011a4                getCurrrentBandAndSmallElapsed
+ .text.getRemaingAndBandTime
+                0x0000000000001204       0x40 src/c/timeCalculator.c.25.o
+                0x0000000000001204                getRemaingAndBandTime
+ .text.getIndexOfFirstZeroActualTime
+                0x0000000000001244       0x1c src/c/timeCalculator.c.25.o
+                0x0000000000001244                getIndexOfFirstZeroActualTime
+ .text.getPreviousTotalActualTime
+                0x0000000000001260       0x20 src/c/timeCalculator.c.25.o
+                0x0000000000001260                getPreviousTotalActualTime
+ .text.populateActualTimes
+                0x0000000000001280       0xdc src/c/timeCalculator.c.25.o
+                0x0000000000001280                populateActualTimes
+ .text.runningStartFn
+                0x000000000000135c       0x78 src/c/timeCalculator.c.25.o
+                0x000000000000135c                runningStartFn
+ .text.getActualTime
+                0x00000000000013d4       0x10 src/c/timeCalculator.c.25.o
+                0x00000000000013d4                getActualTime
+ .text.initDisplayTime
+                0x00000000000013e4       0xa4 src/c/timeCalculator.c.25.o
+                0x00000000000013e4                initDisplayTime
+ .text.togglePaused
+                0x0000000000001488       0x10 src/c/timeCalculator.c.25.o
+                0x0000000000001488                togglePaused
+ .text.getCurrentPlannedLapTime
+                0x0000000000001498       0x20 src/c/timeCalculator.c.25.o
+                0x0000000000001498                getCurrentPlannedLapTime
+ .text.getCountDownBand
+                0x00000000000014b8       0x1c src/c/timeCalculator.c.25.o
+                0x00000000000014b8                getCountDownBand
+ .text.getRealElapsedTime
+                0x00000000000014d4       0x30 src/c/timeCalculator.c.25.o
+                0x00000000000014d4                getRealElapsedTime
+ .text.getProjectedFinishTime
+                0x0000000000001504       0x3c src/c/timeCalculator.c.25.o
+                0x0000000000001504                getProjectedFinishTime
+ .text.getDisplayTime
+                0x0000000000001540       0x20 src/c/timeCalculator.c.25.o
+                0x0000000000001540                getDisplayTime
+ .text.getPercentCompleteTimes10
+                0x0000000000001560        0xc src/c/timeCalculator.c.25.o
+                0x0000000000001560                getPercentCompleteTimes10
+ .text.setStart
+                0x000000000000156c       0x10 src/c/timeCalculator.c.25.o
+                0x000000000000156c                setStart
+ .text.getIsFinished
+                0x000000000000157c       0x44 src/c/timeCalculator.c.25.o
+                0x000000000000157c                getIsFinished
+ .text.app_event_loop
+                0x00000000000015c0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015c0                app_event_loop
+ .text.app_log  0x00000000000015cc        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015cc                app_log
+ .text.bitmap_layer_create
+                0x00000000000015d8        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015d8                bitmap_layer_create
+ .text.bitmap_layer_destroy
+                0x00000000000015e4        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015e4                bitmap_layer_destroy
+ .text.bitmap_layer_get_layer
+                0x00000000000015f0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015f0                bitmap_layer_get_layer
+ .text.bitmap_layer_set_bitmap
+                0x00000000000015fc        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000015fc                bitmap_layer_set_bitmap
+ .text.bitmap_layer_set_compositing_mode
+                0x0000000000001608        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001608                bitmap_layer_set_compositing_mode
+ .text.fonts_get_system_font
+                0x0000000000001614        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001614                fonts_get_system_font
+ .text.gbitmap_create_with_resource
+                0x0000000000001620        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001620                gbitmap_create_with_resource
+ .text.gbitmap_destroy
+                0x000000000000162c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000162c                gbitmap_destroy
+ .text.gmtime   0x0000000000001638        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001638                gmtime
+ .text.graphics_draw_line
+                0x0000000000001644        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001644                graphics_draw_line
+ .text.graphics_fill_circle
+                0x0000000000001650        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001650                graphics_fill_circle
+ .text.layer_add_child
+                0x000000000000165c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000165c                layer_add_child
+ .text.layer_create
+                0x0000000000001668        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001668                layer_create
+ .text.layer_destroy
+                0x0000000000001674        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001674                layer_destroy
+ .text.layer_get_bounds
+                0x0000000000001680        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001680                layer_get_bounds
+ .text.layer_get_frame
+                0x000000000000168c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000168c                layer_get_frame
+ .text.layer_set_update_proc
+                0x0000000000001698        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001698                layer_set_update_proc
+ .text.memset   0x00000000000016a4        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016a4                memset
+ .text.menu_cell_basic_draw
+                0x00000000000016b0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016b0                menu_cell_basic_draw
+ .text.menu_cell_basic_header_draw
+                0x00000000000016bc        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016bc                menu_cell_basic_header_draw
+ .text.menu_layer_destroy
+                0x00000000000016c8        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016c8                menu_layer_destroy
+ .text.menu_layer_get_layer
+                0x00000000000016d4        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016d4                menu_layer_get_layer
+ .text.menu_layer_set_click_config_onto_window
+                0x00000000000016e0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016e0                menu_layer_set_click_config_onto_window
+ .text.snprintf
+                0x00000000000016ec        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016ec                snprintf
+ .text.strcpy   0x00000000000016f8        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000016f8                strcpy
+ .text.strftime
+                0x0000000000001704        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001704                strftime
+ .text.tick_timer_service_subscribe
+                0x0000000000001710        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001710                tick_timer_service_subscribe
+ .text.vibes_short_pulse
+                0x000000000000171c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000171c                vibes_short_pulse
+ .text.window_create
+                0x0000000000001728        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001728                window_create
+ .text.window_destroy
+                0x0000000000001734        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001734                window_destroy
+ .text.window_get_root_layer
+                0x0000000000001740        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001740                window_get_root_layer
+ .text.window_set_click_config_provider
+                0x000000000000174c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000174c                window_set_click_config_provider
+ .text.window_set_window_handlers
+                0x0000000000001758        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001758                window_set_window_handlers
+ .text.window_stack_contains_window
+                0x0000000000001764        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001764                window_stack_contains_window
+ .text.window_stack_get_top_window
+                0x0000000000001770        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001770                window_stack_get_top_window
+ .text.window_stack_pop
+                0x000000000000177c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000177c                window_stack_pop
+ .text.window_stack_push
+                0x0000000000001788        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001788                window_stack_push
+ .text.window_long_click_subscribe
+                0x0000000000001794        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001794                window_long_click_subscribe
+ .text.window_single_click_subscribe
+                0x00000000000017a0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017a0                window_single_click_subscribe
+ .text.graphics_context_set_fill_color
+                0x00000000000017ac        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017ac                graphics_context_set_fill_color
+ .text.graphics_context_set_stroke_color
+                0x00000000000017b8        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017b8                graphics_context_set_stroke_color
+ .text.window_set_background_color
+                0x00000000000017c4        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017c4                window_set_background_color
+ .text.menu_layer_create
+                0x00000000000017d0        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017d0                menu_layer_create
+ .text.action_bar_layer_add_to_window
+                0x00000000000017dc        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017dc                action_bar_layer_add_to_window
+ .text.action_bar_layer_create
+                0x00000000000017e8        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017e8                action_bar_layer_create
+ .text.action_bar_layer_destroy
+                0x00000000000017f4        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000017f4                action_bar_layer_destroy
+ .text.action_bar_layer_set_icon
+                0x0000000000001800        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001800                action_bar_layer_set_icon
+ .text.text_layer_create
+                0x000000000000180c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000180c                text_layer_create
+ .text.text_layer_destroy
+                0x0000000000001818        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001818                text_layer_destroy
+ .text.text_layer_get_layer
+                0x0000000000001824        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001824                text_layer_get_layer
+ .text.text_layer_set_background_color
+                0x0000000000001830        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001830                text_layer_set_background_color
+ .text.text_layer_set_font
+                0x000000000000183c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000183c                text_layer_set_font
+ .text.text_layer_set_text
+                0x0000000000001848        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001848                text_layer_set_text
+ .text.text_layer_set_text_alignment
+                0x0000000000001854        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001854                text_layer_set_text_alignment
+ .text.text_layer_set_text_color
+                0x0000000000001860        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001860                text_layer_set_text_color
+ .text.time     0x000000000000186c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000186c                time
+ .text.menu_layer_set_normal_colors
+                0x0000000000001878        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001878                menu_layer_set_normal_colors
+ .text.menu_layer_set_callbacks
+                0x0000000000001884        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001884                menu_layer_set_callbacks
+ .text.time_ms  0x0000000000001890        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000001890                time_ms
+ .text.grect_inset
+                0x000000000000189c        0xc /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000189c                grect_inset
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00000000000018a8       0x27 src/c/dialog_choice_window.c.25.o
+ *fill*         0x00000000000018cf        0x1 
+ .rodata.label_insets.7485
+                0x00000000000018d0        0x8 src/c/dialog_choice_window.c.25.o
+ .rodata.icon_insets.7484
+                0x00000000000018d8        0x8 src/c/dialog_choice_window.c.25.o
+ .rodata.str1.1
+                0x00000000000018e0       0x93 src/c/main.c.25.o
+                                         0xa3 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000001973       0x3c src/c/menuHandler.c.25.o
+                                         0x4d (size before relaxing)
+ .rodata.str1.1
+                0x00000000000019af       0xbb src/c/testDetails.c.25.o
+                                         0xc8 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000001a6a       0x3d src/c/timeCalculator.c.25.o
+
+.glue_7         0x0000000000001aa8        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x0000000000001aa8        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000001aa8        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000000001aa8        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000000001aa8        0x0
+ .iplt          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+
+.rel.dyn        0x0000000000001aa8        0x0
+ .rel.iplt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .rel.got       0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+
+.data           0x0000000000001aa8      0x530
+ *(.data)
+ .data          0x0000000000001aa8        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x0000000000001aa8        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000001aa8                __dso_handle
+ .data          0x0000000000001aac        0x0 src/c/constants.c.25.o
+ .data          0x0000000000001aac        0x0 src/c/dialog_choice_window.c.25.o
+ .data          0x0000000000001aac        0x0 src/c/main.c.25.o
+ .data          0x0000000000001aac        0x0 src/c/menuHandler.c.25.o
+ .data          0x0000000000001aac      0x120 src/c/testDetails.c.25.o
+ .data          0x0000000000001bcc        0x0 src/c/testMain.c.25.o
+ .data          0x0000000000001bcc        0x0 src/c/timeCalculator.c.25.o
+ .data          0x0000000000001bcc        0x0 aplite/appinfo.auto.c.25.o
+ .data          0x0000000000001bcc        0x0 aplite/src/resource_ids.auto.c.25.o
+ .data          0x0000000000001bcc        0x0 /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .data          0x0000000000001bcc        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000001bcc        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ *(.data.*)
+ .data.epochTime
+                0x0000000000001bcc        0x4 src/c/constants.c.25.o
+                0x0000000000001bcc                epochTime
+ .data.rel.ro.local.s_events
+                0x0000000000001bd0       0x20 src/c/main.c.25.o
+ .data.rel.ro.local.sub_click_providers
+                0x0000000000001bf0       0x60 src/c/main.c.25.o
+ .data.s_next_planned.7637
+                0x0000000000001c50        0x9 src/c/main.c.25.o
+ *fill*         0x0000000000001c59        0x3 
+ .data.rel.local.layerStores
+                0x0000000000001c5c      0x1d4 src/c/main.c.25.o
+ .data.rel.local.windowStores
+                0x0000000000001e30       0x30 src/c/main.c.25.o
+ .data.s_lineOffset
+                0x0000000000001e60       0x60 src/c/main.c.25.o
+ .data.s_time_tdsext.7634
+                0x0000000000001ec0        0x9 src/c/main.c.25.o
+ *fill*         0x0000000000001ec9        0x3 
+ .data.rel.local.timeFormats
+                0x0000000000001ecc       0x3c src/c/menuHandler.c.25.o
+                0x0000000000001ecc                timeFormats
+ .data.s_countDownBands
+                0x0000000000001f08        0x4 src/c/timeCalculator.c.25.o
+ .data.s_lastBandPercentOfMax
+                0x0000000000001f0c        0x4 src/c/timeCalculator.c.25.o
+ .data.s_countDownBand
+                0x0000000000001f10       0xc8 src/c/timeCalculator.c.25.o
+
+.igot.plt       0x0000000000001fd8        0x0
+ .igot.plt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+
+.got            0x0000000000001fd8        0xc
+ .got           0x0000000000001fd8        0xc /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+
+.got.plt        0x0000000000001fe4        0xc
+ .got.plt       0x0000000000001fe4        0xc /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000001fe4                _GLOBAL_OFFSET_TABLE_
+
+.bss            0x0000000000001ff0      0x358
+ *(.bss)
+ *(.bss.*)
+ .bss.s_cross_bitmap
+                0x0000000000001ff0        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.s_tick_bitmap
+                0x0000000000001ff4        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.s_action_bar_layer
+                0x0000000000001ff8        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.s_icon_layer
+                0x0000000000001ffc        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.s_label_layer
+                0x0000000000002000        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.s_icon_bitmap
+                0x0000000000002004        0x4 src/c/dialog_choice_window.c.25.o
+ .bss.pointerOffset
+                0x0000000000002008       0x60 src/c/main.c.25.o
+ .bss.s_info_bitmap
+                0x0000000000002068        0x4 src/c/main.c.25.o
+ .bss.upCP      0x000000000000206c        0x4 src/c/main.c.25.o
+ .bss.s_cross_bitmap
+                0x0000000000002070        0x4 src/c/main.c.25.o
+ .bss.s_drawHeight
+                0x0000000000002074        0x4 src/c/main.c.25.o
+ .bss.s_buffer2.7628
+                0x0000000000002078        0x9 src/c/main.c.25.o
+ *fill*         0x0000000000002081        0x3 
+ .bss.s_drawWidth
+                0x0000000000002084        0x4 src/c/main.c.25.o
+ .bss.s_play_bitmap
+                0x0000000000002088        0x4 src/c/main.c.25.o
+ .bss.selectCP  0x000000000000208c        0x4 src/c/main.c.25.o
+ .bss.s_next_bitmap
+                0x0000000000002090        0x4 src/c/main.c.25.o
+ .bss.s_empty_bitmap
+                0x0000000000002094        0x4 src/c/main.c.25.o
+ .bss.currTickHand
+                0x0000000000002098        0x4 src/c/main.c.25.o
+ .bss.s_projectedFinishTime
+                0x000000000000209c        0x4 src/c/main.c.25.o
+ .bss.s_revertToDisplay
+                0x00000000000020a0        0x4 src/c/main.c.25.o
+ .bss.s_pause_bitmap
+                0x00000000000020a4        0x4 src/c/main.c.25.o
+ .bss.s_buffer1.7627
+                0x00000000000020a8        0x9 src/c/main.c.25.o
+ *fill*         0x00000000000020b1        0x3 
+ .bss.s_settings_bitmap
+                0x00000000000020b4        0x4 src/c/main.c.25.o
+ .bss.downCP    0x00000000000020b8        0x4 src/c/main.c.25.o
+ .bss.s_plannedTotalTime
+                0x00000000000020bc        0x4 src/c/menuHandler.c.25.o
+ .bss.s_actualTotalTime
+                0x00000000000020c0        0x4 src/c/menuHandler.c.25.o
+ .bss.s_actualTime
+                0x00000000000020c4       0xc8 src/c/menuHandler.c.25.o
+ .bss.s_numTimes
+                0x000000000000218c        0x4 src/c/menuHandler.c.25.o
+ .bss.s_plannedTime
+                0x0000000000002190       0xc8 src/c/menuHandler.c.25.o
+ .bss.s_showActualTines
+                0x0000000000002258        0x1 src/c/menuHandler.c.25.o
+ *fill*         0x0000000000002259        0x3 
+ .bss.s_menu_layer
+                0x000000000000225c        0x4 src/c/menuHandler.c.25.o
+ .bss.pauseFunctionP
+                0x0000000000002260        0x4 src/c/timeCalculator.c.25.o
+ .bss.s_finishedOneSet
+                0x0000000000002264        0x1 src/c/timeCalculator.c.25.o
+ *fill*         0x0000000000002265        0x3 
+ .bss.s_realStartTime
+                0x0000000000002268        0x4 src/c/timeCalculator.c.25.o
+ .bss.s_totalBandTime
+                0x000000000000226c        0x4 src/c/timeCalculator.c.25.o
+ .bss.startFunctionP
+                0x0000000000002270        0x4 src/c/timeCalculator.c.25.o
+ .bss.s_pauseTime
+                0x0000000000002274        0x4 src/c/timeCalculator.c.25.o
+ .bss.s_lastConfirmedBand
+                0x0000000000002278        0x4 src/c/timeCalculator.c.25.o
+ .bss.s_actualTimes
+                0x000000000000227c       0xc8 src/c/timeCalculator.c.25.o
+ .bss.s_startTime
+                0x0000000000002344        0x4 src/c/timeCalculator.c.25.o
+
+DISCARD
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+ *(.eh_frame)
+OUTPUT(/Users/tennis/Workspace/marathonSplit/build/aplite/pebble-app.elf elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x27
+ .ARM.attributes
+                0x0000000000000000       0x19 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .ARM.attributes
+                0x0000000000000019       0x29 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+ .ARM.attributes
+                0x0000000000000042       0x33 src/c/constants.c.25.o
+ .ARM.attributes
+                0x0000000000000075       0x33 src/c/dialog_choice_window.c.25.o
+ .ARM.attributes
+                0x00000000000000a8       0x33 src/c/main.c.25.o
+ .ARM.attributes
+                0x00000000000000db       0x33 src/c/menuHandler.c.25.o
+ .ARM.attributes
+                0x000000000000010e       0x33 src/c/testDetails.c.25.o
+ .ARM.attributes
+                0x0000000000000141       0x33 src/c/testMain.c.25.o
+ .ARM.attributes
+                0x0000000000000174       0x33 src/c/timeCalculator.c.25.o
+ .ARM.attributes
+                0x00000000000001a7       0x33 aplite/appinfo.auto.c.25.o
+ .ARM.attributes
+                0x00000000000001da       0x33 aplite/src/resource_ids.auto.c.25.o
+ .ARM.attributes
+                0x000000000000020d       0x21 /Users/tennis/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .ARM.attributes
+                0x000000000000022e       0x29 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .ARM.attributes
+                0x0000000000000257       0x19 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+
+.comment        0x0000000000000000       0x4e
+ .comment       0x0000000000000000       0x4e /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                                         0x4f (size before relaxing)
+ .comment       0x0000000000000000       0x4f src/c/constants.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/dialog_choice_window.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/main.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/menuHandler.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/testDetails.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/testMain.c.25.o
+ .comment       0x0000000000000000       0x4f src/c/timeCalculator.c.25.o
+ .comment       0x0000000000000000       0x4f aplite/appinfo.auto.c.25.o
+ .comment       0x0000000000000000       0x4f aplite/src/resource_ids.auto.c.25.o
+ .comment       0x0000000000000000       0x4f /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+
+.debug_info     0x0000000000000000     0x669a
+ .debug_info    0x0000000000000000      0x1f6 src/c/constants.c.25.o
+ .debug_info    0x00000000000001f6      0x890 src/c/dialog_choice_window.c.25.o
+ .debug_info    0x0000000000000a86     0x24e5 src/c/main.c.25.o
+ .debug_info    0x0000000000002f6b      0xf30 src/c/menuHandler.c.25.o
+ .debug_info    0x0000000000003e9b     0x15c7 src/c/testDetails.c.25.o
+ .debug_info    0x0000000000005462      0xe1f src/c/timeCalculator.c.25.o
+ .debug_info    0x0000000000006281      0x31a aplite/appinfo.auto.c.25.o
+ .debug_info    0x000000000000659b       0xff aplite/src/resource_ids.auto.c.25.o
+
+.debug_abbrev   0x0000000000000000     0x1217
+ .debug_abbrev  0x0000000000000000       0xf7 src/c/constants.c.25.o
+ .debug_abbrev  0x00000000000000f7      0x1ce src/c/dialog_choice_window.c.25.o
+ .debug_abbrev  0x00000000000002c5      0x508 src/c/main.c.25.o
+ .debug_abbrev  0x00000000000007cd      0x313 src/c/menuHandler.c.25.o
+ .debug_abbrev  0x0000000000000ae0      0x246 src/c/testDetails.c.25.o
+ .debug_abbrev  0x0000000000000d26      0x40f src/c/timeCalculator.c.25.o
+ .debug_abbrev  0x0000000000001135       0x9e aplite/appinfo.auto.c.25.o
+ .debug_abbrev  0x00000000000011d3       0x44 aplite/src/resource_ids.auto.c.25.o
+
+.debug_loc      0x0000000000000000     0x2b85
+ .debug_loc     0x0000000000000000       0xe6 src/c/constants.c.25.o
+ .debug_loc     0x00000000000000e6       0xb4 src/c/dialog_choice_window.c.25.o
+ .debug_loc     0x000000000000019a      0xc5b src/c/main.c.25.o
+ .debug_loc     0x0000000000000df5      0x70b src/c/menuHandler.c.25.o
+ .debug_loc     0x0000000000001500      0xb63 src/c/testDetails.c.25.o
+ .debug_loc     0x0000000000002063      0xb22 src/c/timeCalculator.c.25.o
+
+.debug_aranges  0x0000000000000000      0x408
+ .debug_aranges
+                0x0000000000000000       0x30 src/c/constants.c.25.o
+ .debug_aranges
+                0x0000000000000030       0x28 src/c/dialog_choice_window.c.25.o
+ .debug_aranges
+                0x0000000000000058      0x128 src/c/main.c.25.o
+ .debug_aranges
+                0x0000000000000180       0x88 src/c/menuHandler.c.25.o
+ .debug_aranges
+                0x0000000000000208       0xa0 src/c/testDetails.c.25.o
+ .debug_aranges
+                0x00000000000002a8      0x130 src/c/timeCalculator.c.25.o
+ .debug_aranges
+                0x00000000000003d8       0x18 aplite/appinfo.auto.c.25.o
+ .debug_aranges
+                0x00000000000003f0       0x18 aplite/src/resource_ids.auto.c.25.o
+
+.debug_ranges   0x0000000000000000      0x6d8
+ .debug_ranges  0x0000000000000000       0x20 src/c/constants.c.25.o
+ .debug_ranges  0x0000000000000020       0x18 src/c/dialog_choice_window.c.25.o
+ .debug_ranges  0x0000000000000038      0x2b8 src/c/main.c.25.o
+ .debug_ranges  0x00000000000002f0       0xc0 src/c/menuHandler.c.25.o
+ .debug_ranges  0x00000000000003b0      0x138 src/c/testDetails.c.25.o
+ .debug_ranges  0x00000000000004e8      0x1f0 src/c/timeCalculator.c.25.o
+
+.debug_line     0x0000000000000000     0x19d5
+ .debug_line    0x0000000000000000      0x1f3 src/c/constants.c.25.o
+ .debug_line    0x00000000000001f3      0x181 src/c/dialog_choice_window.c.25.o
+ .debug_line    0x0000000000000374      0x68d src/c/main.c.25.o
+ .debug_line    0x0000000000000a01      0x3f0 src/c/menuHandler.c.25.o
+ .debug_line    0x0000000000000df1      0x43b src/c/testDetails.c.25.o
+ .debug_line    0x000000000000122c        0x0 src/c/testMain.c.25.o
+ .debug_line    0x000000000000122c      0x5b0 src/c/timeCalculator.c.25.o
+ .debug_line    0x00000000000017dc      0x135 aplite/appinfo.auto.c.25.o
+ .debug_line    0x0000000000001911       0xc4 aplite/src/resource_ids.auto.c.25.o
+
+.debug_str      0x0000000000000000     0x216e
+ .debug_str     0x0000000000000000      0x144 src/c/constants.c.25.o
+                                        0x182 (size before relaxing)
+ .debug_str     0x0000000000000144      0x46d src/c/dialog_choice_window.c.25.o
+                                        0x565 (size before relaxing)
+ .debug_str     0x00000000000005b1      0xba1 src/c/main.c.25.o
+                                       0x1010 (size before relaxing)
+ .debug_str     0x0000000000001152      0x5d9 src/c/menuHandler.c.25.o
+                                        0x841 (size before relaxing)
+ .debug_str     0x000000000000172b      0x2fe src/c/testDetails.c.25.o
+                                        0x4b6 (size before relaxing)
+ .debug_str     0x0000000000001a29      0x466 src/c/timeCalculator.c.25.o
+                                        0x724 (size before relaxing)
+ .debug_str     0x0000000000001e8f      0x22f aplite/appinfo.auto.c.25.o
+                                        0x31a (size before relaxing)
+ .debug_str     0x00000000000020be       0xb0 aplite/src/resource_ids.auto.c.25.o
+                                        0x175 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0xa68
+ .debug_frame   0x0000000000000000       0x48 src/c/constants.c.25.o
+ .debug_frame   0x0000000000000048       0x4c src/c/dialog_choice_window.c.25.o
+ .debug_frame   0x0000000000000094      0x370 src/c/main.c.25.o
+ .debug_frame   0x0000000000000404      0x15c src/c/menuHandler.c.25.o
+ .debug_frame   0x0000000000000560      0x200 src/c/testDetails.c.25.o
+ .debug_frame   0x0000000000000760      0x308 src/c/timeCalculator.c.25.o
