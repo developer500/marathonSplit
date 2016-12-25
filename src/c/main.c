@@ -89,15 +89,15 @@ typedef struct {
 #define DATA_RECEIVED_WINDOW_INDEX 4
 #define INVALID_STATE_WINDOW_INDEX 5
 
-typedef struct {
-  Window* window;
-  void (*click_provider)(void* context);
-} WindowStore;
-
 static void main_click_config_provider(void* context);
 static void empty_click_config_provider(void* context) {}
 static void lap_times_click_config_provider(void* context);
 static void yes_no_click_config_provider(void* context);
+
+typedef struct {
+  Window* window;
+  void (*click_provider)(void* context);
+} WindowStore;
 
 static WindowStore windowStores[INVALID_STATE_WINDOW_INDEX+1] = {
   {NULL, &main_click_config_provider},
@@ -128,7 +128,7 @@ static LayerStore layerStores[NUM_LAYERS] = {
     { NULL, FONT_KEY_GOTHIC_18, 0, 0, 0, MAIN_WINDOW_INDEX, false, "", TYPE_ACTION_BAR},
   };
 
-static GBitmap *s_empty_bitmap, *s_play_bitmap, *s_pause_bitmap, *s_next_bitmap, *s_cross_bitmap, *s_info_bitmap;
+static GBitmap *s_empty_bitmap, *s_play_bitmap, *s_pause_bitmap, *s_next_bitmap, *s_cross_bitmap, *s_info_bitmap , *s_settings_bitmap;
 
 #define INITIAL_STATE 0
 #define RUNNING_STATE 1
@@ -147,10 +147,11 @@ static void setPausedCP(time_tds inCurrentTime);
 static void resetPausedCP(time_tds inCurrentTime);
 static void clearDataCP(time_tds inCurrentTime);
 static void runningStartCP(time_tds inCurrentTime);
+static void settingsCP(time_tds inCurrentTime);
 
 static Sub_Click_Provider sub_click_providers[(FINISHED_STATE+1)*BUTTONS_DEFINED] = {
   //               up                              center                           down
-  /*initial */ {&s_empty_bitmap, &emptyCP},        {&s_empty_bitmap, &emptyCP},     {&s_play_bitmap, &initialStartCP},
+  /*initial */ {&s_settings_bitmap, &settingsCP},        {&s_empty_bitmap, &emptyCP},     {&s_play_bitmap, &initialStartCP},
   /*running */ {&s_pause_bitmap, &setPausedCP},    {&s_empty_bitmap, &emptyCP},     {&s_next_bitmap, &runningStartCP},
   /*paused  */ {&s_empty_bitmap, &emptyCP},        {&s_cross_bitmap, &clearDataCP}, {&s_play_bitmap, &resetPausedCP},
   /*finished*/ {&s_empty_bitmap, &emptyCP},        {&s_cross_bitmap, &clearDataCP}, {&s_info_bitmap, &runningStartCP},
@@ -225,7 +226,9 @@ static void showProjectedFinishTimeTH(time_tds inCurrentTime) {
 
 static void main_window_stack_push(int inWindowIndex) {
   window_stack_push(windowStores[inWindowIndex].window, true);
-  window_set_click_config_provider(windowStores[inWindowIndex].window, windowStores[inWindowIndex].click_provider);
+  if (inWindowIndex != LAP_TIMES_WINDOW_INDEX) {
+    window_set_click_config_provider(windowStores[inWindowIndex].window, windowStores[inWindowIndex].click_provider);    
+  }
 }
 
 static void changeDisplayProjectedFinish(time_tds inCurrentTime) {
@@ -275,6 +278,10 @@ static void setPausedCP(time_tds inCurrentTime) {
 static void resetPausedCP(time_tds inCurrentTime) {
   togglePaused(inCurrentTime);
   set_action_icons(RUNNING_STATE);
+}
+
+static void settingsCP(time_tds inCurrentTime) {
+    changeDisplayLapTimes(inCurrentTime);
 }
 
 static void runningStartCP(time_tds inCurrentTime) {
@@ -473,6 +480,7 @@ static void main_window_load(Window* window) {
   s_next_bitmap = gbitmap_create_with_resource(RESOURCE_ID_NEXT);
   s_cross_bitmap = gbitmap_create_with_resource(RESOURCE_ID_CROSS);
   s_info_bitmap = gbitmap_create_with_resource(RESOURCE_ID_INFO);
+  s_settings_bitmap = gbitmap_create_with_resource(RESOURCE_ID_SETTINGS);
 
   layerStores[ACTION_BAR_LAYER].layer = (Layer *)action_bar_layer_create();
   action_bar_layer_set_icon((ActionBarLayer *)layerStores[ACTION_BAR_LAYER].layer, BUTTON_ID_DOWN, s_play_bitmap);
@@ -538,7 +546,7 @@ static void lapTimes_window_load(Window* window) {
 
 int getWindowIndexFromWindow(Window * inWindow) {
   
-  for (int windowIndex = 0 ; windowIndex <= LAP_TIMES_WINDOW_INDEX  ; windowIndex++) {
+  for (int windowIndex = 0 ; windowIndex <= INVALID_STATE_WINDOW_INDEX  ; windowIndex++) {
     if (windowStores[windowIndex].window == inWindow) {
       return windowIndex;
     }

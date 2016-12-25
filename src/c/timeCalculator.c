@@ -14,6 +14,19 @@ static int s_lastConfirmedBand;
 static int s_lastBandPercentOfMax = 100;
 static time_tds s_actualTimes[MAX_BANDS];
 
+
+// static int s_countDownBands = 32;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+// };
+
 // static int s_countDownBands = 7;
 // static time_tds s_countDownBand[MAX_BANDS] = {
 //  1200, 1200, 1200, 1200,
@@ -33,8 +46,47 @@ static time_tds s_actualTimes[MAX_BANDS];
 // };
 
 
-static int s_countDownBands = 3;
-static time_tds s_countDownBand[MAX_BANDS] = {150, 150, 150};
+// static int s_countDownBands = 3;
+// static time_tds s_countDownBand[MAX_BANDS] = {150, 150, 150};
+
+static int s_countDownBands = 10;
+static time_tds s_countDownBand[MAX_BANDS] = {10,10,10,10,10,10,10,10,10,10};
+
+// static int s_countDownBands = 48;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 
+//  801,
+//  1335,
+  
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 1335, 1335, 1335,
+//  1335, 1335, 
+//  801,
+//  1335
+// };
+
+// static int s_countDownBands = 33;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
+//  668,                        // 200 m recovery
+//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
+//  668,                        // 200 m recovery
+//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
+//  668,                        // 200 m recovery
+//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
+
+//  490, 490, 490, 490,         // 2 laps = 800m @  4:07 for 1000 = 1960sec = 1960/4 = 490 for 200m
+//  1336,                       // 400 m recovery
+
+//  490, 490, 490, 490,         // 2 laps = 800m @  4:07 for 1000 = 1960sec = 1960/4 = 490 for 200m
+//  1336,                       // 400 m recovery
+// };
 
 // static int s_countDownBands = 19;
 // static time_tds s_countDownBand[MAX_BANDS] = {
@@ -249,12 +301,15 @@ void populateActualTimes(time_tds inCurrentTime, int inHighestBandToFillIn) {
   time_tds prevTotalTime = getPreviousTotalActualTime(firstZeroBand);
     
   time_tds timeToDistribute = inCurrentTime - s_realStartTime - prevTotalTime;
+  
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "Time to distribute %d", timeToDistribute);
     
   time_tds timeEachBand = timeToDistribute*100 / bandsToFilltimes100;
   time_tds remaindertimes100 = timeToDistribute*100 % bandsToFilltimes100;
 
   while (timeToDistribute>0) {
     time_tds timeWithRoundUp = (remaindertimes100>0) ? (timeEachBand+1) : timeEachBand;
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "Time With Round Up %d", timeWithRoundUp);
     time_tds timeForBand = timeWithRoundUp > timeToDistribute ? timeToDistribute : timeWithRoundUp;
     s_actualTimes[firstZeroBand] = timeForBand;
     timeToDistribute -= timeForBand;  
@@ -465,8 +520,8 @@ time_tds getDisplayTimeFn(time_tds inRemainingTime, int inBandIndex) {
 int getDisplayTime(time_tds inCurrentTime) {
   
   time_tds retTime = getRemaingAndBandTime(inCurrentTime, getDisplayTimeFn);  
-  
-  return retTime>=0 ? retTime/10 : (retTime-10)/10;
+    
+  return retTime>=0 ? retTime/10 : (retTime-9)/10;
 }
 
 time_tds getPercentCompleteTimes10Fn(time_tds inRemainingTime, int inBandIndex) {
