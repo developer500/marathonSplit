@@ -14,6 +14,13 @@ static int s_lastConfirmedBand;
 static int s_lastBandPercentOfMax = 100;
 static time_tds s_actualTimes[MAX_BANDS];
 
+ static int s_countDownBands = 32;
+ static time_tds s_countDownBand[MAX_BANDS] = {
+   1340, 1340, 1340, 1340,
+   1340, 1340, 1340, 1340,
+   1340
+ };
+
 
 // static int s_countDownBands = 32;
 // static time_tds s_countDownBand[MAX_BANDS] = {
@@ -34,16 +41,16 @@ static time_tds s_actualTimes[MAX_BANDS];
 // };
 
 
- static int s_countDownBands = 27;
- static time_tds s_countDownBand[MAX_BANDS] = {
-  4800, 4800, 4630, 4630,
-  4630, 4630, 4630, 4630,
-  4630, 4630, 4630, 4630,
-  4630, 4630, 4630, 4630,
-  4630, 4630, 4630, 4630,
-  4630, 4630, 4630, 4630,
-  4630, 4630, 930
- };
+// static int s_countDownBands = 27;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//  4800, 4800, 4630, 4630,
+//  4630, 4630, 4630, 4630,
+//  4630, 4630, 4630, 4630,
+//  4630, 4630, 4630, 4630,
+//  4630, 4630, 4630, 4630,
+//  4630, 4630, 4630, 4630,
+//  4630, 4630, 930
+// };
 
 
 // static int s_countDownBands = 3;
@@ -521,7 +528,8 @@ int getDisplayTime(time_tds inCurrentTime) {
   
   time_tds retTime = getRemaingAndBandTime(inCurrentTime, getDisplayTimeFn);  
     
-  return retTime>=0 ? retTime/10 : (retTime-9)/10;
+  //  return retTime>=0 ? retTime/10 : (retTime-9)/10;
+  return retTime/10;
 }
 
 time_tds getPercentCompleteTimes10Fn(time_tds inRemainingTime, int inBandIndex) {

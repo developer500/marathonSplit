@@ -37,9 +37,9 @@ static void init(void) {
   window = window_create();
     
   window_set_window_handlers(window, (WindowHandlers) {
- //   .load = window_load,
-     .load = window_load_menu,
-//    .load = dialog_choice_window_load,
+     .load = window_load,
+//     .load = window_load_menu,
+//     .load = dialog_choice_window_load,
     .unload = window_unload,
   });
     

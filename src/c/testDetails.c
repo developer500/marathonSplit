@@ -529,11 +529,10 @@ bool testGetTimeStrings(char* inOutStatusMessage) {
 
 bool testExisting(char* inOutStatusMessage) {
   
-  /*
   if (!basicStartStopTest(inOutStatusMessage)) { return false; }
 
   if (!testPaused(inOutStatusMessage)) { return false; }
-   
+
   if (!testReset(inOutStatusMessage)) { return false; }
   
   if (!testFinish(inOutStatusMessage)) { return false; }
@@ -551,22 +550,21 @@ bool testExisting(char* inOutStatusMessage) {
   if (!testCurrentReplannedLapTime2(inOutStatusMessage)) { return false; }
 
   if (!testCurrentReplannedLapTime3(inOutStatusMessage)) { return false; }
-    
+
   if (!testGetTimeStrings(inOutStatusMessage)) { return false; }
   
   if (!testDisplayMessage(inOutStatusMessage)) { return false; }
   
   if (!testRecordingSplitTimes(inOutStatusMessage)) { return false; }
-  */
 
   return true;
 }
 
 bool testTimeCalculator(char* inOutStatusMessage) {
  
-  //if (!testExisting(inOutStatusMessage)) { return false; }
+  if (!testExisting(inOutStatusMessage)) { return false; }
   
-  if (!testDisplayMessage(inOutStatusMessage)) { return false; }
+//  if (!testDisplayMessage(inOutStatusMessage)) { return false; }
   
   return true;
 }
