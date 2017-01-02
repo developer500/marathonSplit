@@ -57,8 +57,15 @@
 		<buildTargets>
 			<target name="install --emulator basalt" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>/usr/local/bin/pebble</buildCommand>
-				<buildArguments/>
 				<buildTarget>install --emulator basalt</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="build" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>/usr/local/bin/pebble</buildCommand>
+				<buildArguments/>
+				<buildTarget>build</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>

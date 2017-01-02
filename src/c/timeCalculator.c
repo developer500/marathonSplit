@@ -10,16 +10,17 @@ static bool s_finishedOneSet;
 static time_tds s_waitAfterFinish = (time_tds)20;  // wait 20 seconds after the projected finish to assume the set has finished
 
 static int s_lastConfirmedBand;
-
+\
 static int s_lastBandPercentOfMax = 100;
 static time_tds s_actualTimes[MAX_BANDS];
 
- static int s_countDownBands = 32;
- static time_tds s_countDownBand[MAX_BANDS] = {
-   1340, 1340, 1340, 1340,
-   1340, 1340, 1340, 1340,
-   1340
- };
+//static int s_countDownBands = 16;
+//static time_tds s_countDownBand[MAX_BANDS] = {
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//   1340, 1340, 1340, 1340,
+//};
 
 
 // static int s_countDownBands = 32;
@@ -106,16 +107,16 @@ static time_tds s_actualTimes[MAX_BANDS];
 //  575, 575, 575, 575,     // 2 laps
 // };
 
-//static int s_countDownBands = 28;
-//static time_tds s_countDownBand[MAX_BANDS] = {
-//  115, 115, 110, 110,
-//  110, 110, 110, 110,
-//  110, 110, 110, 110,
-//  110, 110, 110, 110,
-//  110, 110, 110, 110,
-//  110, 110, 110, 110,
-//  110, 110, 110, 110
-//};
+static int s_countDownBands = 28;
+static time_tds s_countDownBand[MAX_BANDS] = {
+  115, 115, 110, 110,
+  110, 110, 110, 110,
+  110, 110, 110, 110,
+  110, 110, 110, 110,
+  110, 110, 110, 110,
+  110, 110, 110, 110,
+  110, 110, 110, 110
+};
 
 //                                                    463, 463, 463, 463, 463, 463, 463,
 //                                                    458, 458, 458, 458, 458, 458, 458, 458,
