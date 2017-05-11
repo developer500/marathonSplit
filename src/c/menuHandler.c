@@ -66,12 +66,13 @@ typedef struct timeFormatStruct {
   bool showTenths;
 } timeFormat;
 
-#define MAX_TIME_FORMATS 5
+#define MAX_TIME_FORMATS 6
 
 timeFormat timeFormats[MAX_TIME_FORMATS] = {
-    { SECONDS_PER_MINUTE, ":%S", false, true},
+    { SECONDS_PER_MINUTE / 6, "%S", true, true},
+    { 1 * SECONDS_PER_MINUTE, "%S", false, true},
     { 10 * SECONDS_PER_MINUTE, "%M:%S", true, false},
-    { 60 * SECONDS_PER_MINUTE, "%M:%S", false, false},
+    { 1 * SECONDS_PER_HOUR, "%M:%S", false, false},
     { 10 * SECONDS_PER_HOUR, "%H:%M:%S", true, false},
     { 24 * SECONDS_PER_HOUR, "%H:%M:%S", false, false},
   };

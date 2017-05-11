@@ -3,6 +3,8 @@
 #include "timeCalculator.h"
 #include "menuHandler.h"
 
+#define TENTHS_PER_MINUTE SECONDS_PER_MINUTE*10
+
 bool basicStartStopTest(char* inOutStatusMessage) {
 
   time_tds testBands[2] = {40, 30};
@@ -479,7 +481,30 @@ bool testRecordingSplitTimes2(char* inOutStatusMessage) {
   return true;
 }
 
-#define MAX_TIME_FORMATS 18
+bool testRoundingDown(char* inOutStatusMessage) {
+  
+  time_tds testBands[2] = {500, 500};
+  
+  setLastBandPercentOfMax(25);
+  setCountDownBands(testBands, 2);
+  initDisplayTime();
+
+  time_t startTimet = (time_t)0x56c30f40;
+  time_tds startTime = getTimeDsFromTime(startTimet, 0);
+  setStart(startTime);
+  
+  if (getDisplayTime(startTime) != 50) {return false;}
+  
+  // 10 seconds early
+  startTime += 490;
+  setStart(startTime);
+  
+  if (getDisplayTime(startTime) != 1) {return false;}
+  
+  return true;
+}
+
+#define MAX_TIME_FORMATS 19
 
 bool testGetTimeStrings(char* inOutStatusMessage) {
   
@@ -491,24 +516,25 @@ bool testGetTimeStrings(char* inOutStatusMessage) {
   } testTimeFormat;
 
   testTimeFormat testTimeFormats[MAX_TIME_FORMATS] = {
-      { 0, ":00", false, 3},
-      { 1, ":00.1", false, 5},
-      { 9, ":00.9", false, 5},        
-      { 10, ":01", false, 3},
-      { 90, ":09", false, 3},        
-      { 100, ":10", false, 3},
-      { (SECONDS_PER_MINUTE-1)*10, ":59", false, 3},
-      { (SECONDS_PER_MINUTE-1)*10 + 1, ":59.1", false, 5},
-      { SECONDS_PER_MINUTE*10, "1:00", false, 4},
-      { SECONDS_PER_MINUTE*10 + 1, "1:00", false, 4},       // Over 59 seconds - don't show the tenths.
-      { (SECONDS_PER_MINUTE*10 - 1) * 10 , "9:59", false, 4},
-      { SECONDS_PER_MINUTE*100, "10:00", false, 5},
-      { (SECONDS_PER_HOUR-1) * 10, "59:59", false, 5},
-      { SECONDS_PER_HOUR * 10, "1:00:00", false, 7},
-      { SECONDS_PER_HOUR*13 * 10, "13:00:00", false, 8},
-      { SECONDS_PER_HOUR*24 * 10, "00:00:00", false, 8},
-      { (SECONDS_PER_MINUTE*10-1) * 10, "+9:59", true, 5},
-      { (-1*(SECONDS_PER_MINUTE*10-1)) * 10, "-9:59", true, 5},
+       { 0, "0", false, 1},
+       { 1, "0.1", false, 3},
+       { 9, "0.9", false, 3},        
+       { 10, "1", false, 1},
+       { 11, "1.1", false, 3},
+       { 90, "9", false, 1},        
+       { 100, "10", false, 2},
+       { (SECONDS_PER_MINUTE-1)*10, "59", false, 2},
+       { (SECONDS_PER_MINUTE-1)*10 + 1, "59.1", false, 4},
+       { TENTHS_PER_MINUTE, "1:00", false, 4},
+       { TENTHS_PER_MINUTE + 1, "1:00", false, 4},       // Over 59 seconds - don't show the tenths.
+       { (TENTHS_PER_MINUTE - 1) * 10 , "9:59", false, 4},
+       { TENTHS_PER_MINUTE*10, "10:00", false, 5},
+       { (SECONDS_PER_HOUR-1) * 10, "59:59", false, 5},
+       { SECONDS_PER_HOUR * 10, "1:00:00", false, 7},
+       { SECONDS_PER_HOUR*13 * 10, "13:00:00", false, 8},
+       { SECONDS_PER_HOUR*24 * 10, "00:00:00", false, 8},
+       { (SECONDS_PER_MINUTE*10-1) * 10, "+9:59", true, 5},
+       { (-1*(SECONDS_PER_MINUTE*10-1)) * 10, "-9:59", true, 5},
     };
   
   char strTimeBuffer[9];
@@ -562,9 +588,13 @@ bool testExisting(char* inOutStatusMessage) {
 
 bool testTimeCalculator(char* inOutStatusMessage) {
  
-  if (!testExisting(inOutStatusMessage)) { return false; }
+  //if (!testExisting(inOutStatusMessage)) { return false; }
+
+  //if (!testDisplayMessage(inOutStatusMessage)) { return false; }
   
-//  if (!testDisplayMessage(inOutStatusMessage)) { return false; }
-  
+  //if (!testRoundingDown(inOutStatusMessage)) { return false; }  
+
+  if (!testGetTimeStrings(inOutStatusMessage)) { return false; }  
+
   return true;
 }

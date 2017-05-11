@@ -10,17 +10,132 @@ static bool s_finishedOneSet;
 static time_tds s_waitAfterFinish = (time_tds)20;  // wait 20 seconds after the projected finish to assume the set has finished
 
 static int s_lastConfirmedBand;
-\
+
 static int s_lastBandPercentOfMax = 100;
 static time_tds s_actualTimes[MAX_BANDS];
 
-//static int s_countDownBands = 16;
-//static time_tds s_countDownBand[MAX_BANDS] = {
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//};
+
+// // //This is the Alameda Island Loop from the house
+// static int s_countDownBands = 20;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   3984, // Traffic lights at hbr parkway
+//   3307, // S Loop Road and HBR
+//   3247, // North Loop Road and HBR
+//   3665, // Ferry Terminal
+//   4041, // The Ship
+//   6285, // End of the trail at Vet Court
+//   3013, // High Street and Otis
+//   3759, // Park and Shoreline
+//   4326, // Grand and Shoreline
+//   5815, // Toilets at Crab Cove
+//   2599, // Central Ave
+//   4653, // Boat Ramp
+//   6214, // End of Sea Lagoon
+//   4097, // Tower and Monarch
+//   6580, // Ferry Terminal 2
+//   4499, // Stargel and Corral Sea 
+//   4015, // Atlantic and Webster
+//   3493, // Atlantic and Triumph
+//   4152, // Pacific and Paru
+//   5300  // Pacific and Park
+// };
+
+// //This is the Iron Horse Trail
+// static int s_countDownBands = 21;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   2905,
+//   6318,
+//   300,
+//   4320,
+//   9381,
+//   569,
+//   6349,
+//   300,
+//   8597,
+//   4277,
+//   300,
+//   4839,
+//   8285,
+//   5675,
+//   4848,
+//   7174, 
+//   300,
+//   5865,
+//   300,
+//   4487,
+//   3999
+// };
+
+
+
+
+// //This is the MKL loop
+// static int s_countDownBands = 15;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   3620,   // to fedex road
+//   3550,   // to just before bart connector
+//   680,    // just under bart connector
+//   3440,   // to Dolittle
+//   3010,   // swan road
+//   4570,   // Toilets at MLK
+//   900,   // rest at Toilets
+//   4980,   // 2nd bridge
+//   4030,   // PG & E bridge
+//   2640,   // Toilets at boating place 
+//   100,    // rest at toilets
+//   2450,   // over the bridge
+//   2120,   // shoreline and east shore
+//   2125,   // just before lincoln
+//   2950   // Over the foot bridge 
+// };
+
+
+// This is the HBR 6 mile timed run
+static int s_countDownBands = 24;
+static time_tds s_countDownBand[MAX_BANDS] = {
+  1173,
+  1173,
+  1173,
+  1122,
+  1113,
+  1113,
+  1158,
+  1143,
+  1143,
+  1129,
+  1109,
+  1108,
+  1111,
+  1111,
+  1051,
+  1139,
+  1110,
+  1110,
+  1110,
+  1110,
+  1110,
+  1110,
+  1110,
+  1110
+};
+
+// static int s_countDownBands = 16;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110
+// };
+
+// static int s_countDownBands = 23;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+//   1110, 1110, 1110, 1110,
+// };
 
 
 // static int s_countDownBands = 32;
@@ -39,6 +154,18 @@ static time_tds s_actualTimes[MAX_BANDS];
 // static time_tds s_countDownBand[MAX_BANDS] = {
 //  1200, 1200, 1200, 1200,
 //  1157, 1157, 1157
+// };
+
+
+// static int s_countDownBands = 26;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//  5100, 5100, 4900, 4900,
+//  4900, 4900, 4900, 4900,
+//  4900, 4900, 4900, 4900,
+//  4900, 4900, 4900, 4900,
+//  4900, 4900, 4900, 4900,
+//  4900, 4900, 4900, 4900,
+//  4900, 4900, 5920
 // };
 
 
@@ -107,16 +234,34 @@ static time_tds s_actualTimes[MAX_BANDS];
 //  575, 575, 575, 575,     // 2 laps
 // };
 
-static int s_countDownBands = 28;
-static time_tds s_countDownBand[MAX_BANDS] = {
-  1150, 1150, 1100, 1100,
-  1100, 1100, 1100, 1100,
-  1100, 1100, 1100, 1100,
-  1100, 1100, 1100, 1100,
-  1100, 1100, 1100, 1100,
-  1100, 1100, 1100, 1100,
-  1100, 1100, 1100, 1100
-};
+// static int s_countDownBands = 28;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1150, 1150, 1100, 1100,
+//   1100, 1100, 1100, 1100,
+//   1100, 1100, 1100, 1100,
+//   1100, 1100, 1100, 1100,
+//   1100, 1100, 1100, 1100,
+//   1100, 1100, 1100, 1100,
+//   1100, 1100, 1100, 1100
+// };
+
+// static int s_countDownBands = 15;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1055, 1322, 1322,
+//   1322, 1055, 1322, 1322,
+//   1200, 1055, 1200, 1200,
+//   1200, 1200, 1200, 1055,
+// };
+
+// static int s_countDownBands = 24;
+// static time_tds s_countDownBand[MAX_BANDS] = {
+//   1200, 1200, 1200, 1200,
+//   1200, 1200, 1200, 1200,
+//   1200, 1200, 1200, 1200,
+//   1200, 1200, 1200, 1200,
+//   1200, 1200, 1200, 1200,
+//   1200, 1200, 1200, 1200,
+// };
 
 //                                                    463, 463, 463, 463, 463, 463, 463,
 //                                                    458, 458, 458, 458, 458, 458, 458, 458,
