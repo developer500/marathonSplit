@@ -135,6 +135,7 @@ static void menu_cell_track_draw(GContext* ctx, const Layer * cell_layer, const 
 }
 
 
+
 static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data) {
   // Determine which section we're going to draw in
   
