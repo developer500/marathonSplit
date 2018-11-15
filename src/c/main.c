@@ -1,5 +1,5 @@
 //#define testOnly
-#include "constants.h"
+#include "modules/constants.h"
 #include "menuHandler.h"
 #include "dialog_choice_window.h"
 
@@ -9,7 +9,7 @@
 
 #ifndef testOnly
 #include <pebble.h>
-#include "timeCalculator.h"
+#include "modules/timeCalculator.h"
 
 static void singleBuzz() {
   vibes_short_pulse();

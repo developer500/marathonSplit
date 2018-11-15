@@ -1,6 +1,6 @@
 #include <pebble.h>
 #include "testDetails.h"
-#include "timeCalculator.h"
+#include "modules/timeCalculator.h"
 #include "menuHandler.h"
 
 #define TENTHS_PER_MINUTE SECONDS_PER_MINUTE*10
