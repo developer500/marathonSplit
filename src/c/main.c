@@ -1,7 +1,7 @@
 //#define testOnly
 #include "modules/constants.h"
 #include "menuHandler.h"
-#include "dialog_choice_window.h"
+#include "windows/dialog_choice_window.h"
 
 #ifdef testOnly
 #include "testMain.c"
