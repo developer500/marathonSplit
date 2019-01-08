@@ -1,6 +1,4 @@
-#pragma once
-
-#include <pebble.h>
+#include "modules/constants.h"
 
 #define DIALOG_CHOICE_WINDOW_MESSAGE "Clear Data?"
 

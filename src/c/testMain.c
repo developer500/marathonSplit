@@ -1,6 +1,7 @@
 #ifdef testOnly
 #include <pebble.h>
 #include "testDetails.h"
+#include "modules/menuHandler.h"
       
 static Window *window;
 static TextLayer *text_layer;

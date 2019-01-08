@@ -1,8 +1,19 @@
-#include <pebble.h>
+#include "timeCalculator.h"
+#include "global.h"
 
-#define MAX_BANDS 50
+static void main_window_stack_push(int inWindowIndex);
 
-typedef int time_tds;
+
+
+typedef struct {
+  Window* window;
+  void (*click_provider)(void* context);
+} WindowStore;
+
+static WindowStore windowStores[NUM_WINDOWS];
+
+
+static void (*currTickHand)(time_tds inCurrentTime);
 
 time_tds getTimeDs();
 time_t getTimeFromDs(time_tds inTimeDs);

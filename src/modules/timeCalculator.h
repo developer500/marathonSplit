@@ -1,6 +1,8 @@
-#pragma once
 #include <pebble.h>
-#include "constants.h"
+
+#define MAX_BANDS 50
+
+typedef int time_tds;
 
 void initDisplayTime();
 void setStart(time_tds inStartTime);
