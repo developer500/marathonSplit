@@ -1,4 +1,5 @@
 #include <pebble.h>
+#include "constants.h"
 
 MenuLayer * loadMenu(Window *window);
 void lapTimes_window_unload(Window *window);

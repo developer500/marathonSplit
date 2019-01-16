@@ -1,4 +1,4 @@
-#include "modules/constants.h"
+#include "constants.h"
 #include "menuHandler.h"
 
 #define NUM_MENU_SECTIONS 2
@@ -127,13 +127,6 @@ int getTimeFromTimeT(time_tds inTime, bool inAddPlus, char * outPlusTime) {
   return returnLength;
 }
 
-static void menu_cell_track_draw(GContext* ctx, const Layer * cell_layer, const char *text) {
-
-  graphics_context_set_text_color(ctx, GColorBlack);
-  graphics_draw_text(ctx, text, fonts_get_system_font(FONT_KEY_GOTHIC_18), 
-                     layer_get_bounds(cell_layer), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);                     
-}
-
 static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data) {
   // Determine which section we're going to draw in
   
@@ -173,7 +166,8 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
             getTimeFromTimeT(s_actualTime[cell_index->row] - s_plannedTime[cell_index->row]
               , true, mainBufferP);
         } else {
-        	snprintf(mainBufferP, 4, "%d", (int)(s_plannedTime[cell_index->row]/10));
+        	strcpy(mainBufferP, "   ");
+        	//snprintf(mainBufferP, 4, "%d", (int)(s_plannedTime[cell_index->row]/10));
         }
 
 

@@ -1,20 +1,21 @@
-#include "timeCalculator.h"
-#include "global.h"
+#pragma once
+#include <pebble.h>
 
-static void main_window_stack_push(int inWindowIndex);
+#define MAX_BANDS 90
 
+#define MAIN_WINDOW_INDEX 0
+#define PROJECTED_WINDOW_INDEX 1
+#define LAP_TIMES_WINDOW_INDEX 2
+#define YES_NO_WINDOW_INDEX 3
+#define REPLACE_DATA_WINDOW_INDEX 4
+#define CONFIRMED_WINDOW_INDEX 5
+#define ADD_LAPS_WINDOW_INDEX 6
+#define NUM_WINDOWS (ADD_LAPS_WINDOW_INDEX + 1)
 
+static bool s_blackBackground = true;
 
-typedef struct {
-  Window* window;
-  void (*click_provider)(void* context);
-} WindowStore;
-
-static WindowStore windowStores[NUM_WINDOWS];
-
-
-static void (*currTickHand)(time_tds inCurrentTime);
+typedef int time_tds;
 
 time_tds getTimeDs();
 time_t getTimeFromDs(time_tds inTimeDs);
-time_t getTimeDsFromTime(time_t inTime, uint16_t inMillis); 
+time_tds getTimeDsFromTime(time_t inTime, uint16_t inMillis);

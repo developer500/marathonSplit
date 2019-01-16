@@ -11,7 +11,6 @@ static time_tds s_waitAfterFinish = (time_tds)20;  // wait 20 seconds after the 
 
 static int s_lastConfirmedBand;
 
-static int s_lastBandPercentOfMax = 100;
 static time_tds s_actualTimes[MAX_BANDS];
 
 
@@ -90,34 +89,48 @@ static time_tds s_actualTimes[MAX_BANDS];
 // };
 
 
-// This is the HBR 6 mile timed run
-static int s_countDownBands = 24;
+// This is the Loop from Regent
+static int s_countDownBands = 7;
 static time_tds s_countDownBand[MAX_BANDS] = {
-  1173,
-  1173,
-  1173,
-  1122,
-  1113,
-  1113,
-  1158,
-  1143,
-  1143,
-  1129,
-  1109,
-  1108,
-  1111,
-  1111,
-  1051,
-  1139,
-  1110,
-  1110,
-  1110,
-  1110,
-  1110,
-  1110,
-  1110,
-  1110
+  1210,
+  1879,
+  3161,
+  3807,
+  2617,
+  3798,
+  2660
 };
+
+
+
+//// This is the HBR 6 mile timed run
+//static int s_countDownBands = 24;
+//static time_tds s_countDownBand[MAX_BANDS] = {
+//  1173,
+//  1173,
+//  1173,
+//  1122,
+//  1113,
+//  1113,
+//  1158,
+//  1143,
+//  1143,
+//  1129,
+//  1109,
+//  1108,
+//  1111,
+//  1111,
+//  1051,
+//  1139,
+//  1110,
+//  1110,
+//  1110,
+//  1110,
+//  1110,
+//  1110,
+//  1110,
+//  1110
+//};
 
 // static int s_countDownBands = 16;
 // static time_tds s_countDownBand[MAX_BANDS] = {
@@ -301,9 +314,9 @@ static time_tds s_totalBandTime;
 // required to forward declare.
 bool clearPausedFn(time_tds inCurrentTime);
 
-static void (*startFunctionP)(time_tds inCurrentTime);
+static void (*s_startFunctionP)(time_tds inCurrentTime);
 
-static bool (*pauseFunctionP)(time_tds inCurrentTime);
+static bool (*s_pauseFunctionP)(time_tds inCurrentTime);
 
 int getCounDownBands() {
   return s_countDownBands;
@@ -321,10 +334,6 @@ void setCountDownBands(time_tds countDownBandPtr[], int inNumBands) {
     s_countDownBand[bandIndex] = *countDownBandPtr;
     countDownBandPtr++;
   }
-}
-
-void setLastBandPercentOfMax(int inPercentOfMax) {
-  s_lastBandPercentOfMax = inPercentOfMax;
 }
 
 bool getIsStarted() {
@@ -346,7 +355,7 @@ time_tds getElapsedTime(time_tds inCurrentTime) {
   return absoluteCurrentTime - s_startTime;                // eg 0:00:12  - 12 seconds since start was pressed.
 }
 
-int getCurrrentBandAndSmallElapsed(time_tds inCurrentTime, time_tds* inOutSmallElapsd, bool roundForwards) {
+int getCurrrentBandAndSmallElapsed(time_tds inCurrentTime, time_tds* inOutSmallElapsd, bool inRoundForwards) {
   
   time_tds smallelapsedTime = getElapsedTime(inCurrentTime);  
   
@@ -362,7 +371,7 @@ int getCurrrentBandAndSmallElapsed(time_tds inCurrentTime, time_tds* inOutSmallE
     bandIndex %= s_countDownBands;
   }
   
-  if (roundForwards) {
+  if (inRoundForwards) {
     if (smallelapsedTime == s_countDownBand[bandIndex]) {
       bandIndex++;
       bandIndex %= s_countDownBands;
@@ -397,7 +406,7 @@ time_tds getTimeDeltaFn(time_tds inRemainingTime, int inBandIndex) {
 
   time_tds currentBandTime = s_countDownBand[inBandIndex];
 
-  if (inRemainingTime <= (currentBandTime / 2)) {
+  if (inRemainingTime <= (currentBandTime / 10)) {
     // jump forwards
     deltaTime = -1 * inRemainingTime;
   } else {
@@ -442,39 +451,40 @@ void populateActualTimes(time_tds inCurrentTime, int inHighestBandToFillIn) {
   if (firstZeroBand==-1) {
     return;
   }
-      
-  int bandsToFilltimes100 = (inHighestBandToFillIn - firstZeroBand + 1)*100;
-  if (bandsToFilltimes100<=0) {
+  
+  int bandsToFill = (inHighestBandToFillIn - firstZeroBand + 1);
+  if (bandsToFill<=0) {
     // this happens if the user presses start button twice in short time.
     return;
   }
-  
-  bandsToFilltimes100 -= (inHighestBandToFillIn==(s_countDownBands-1)) ? (100 - s_lastBandPercentOfMax) : 0;
-    
-  time_tds prevTotalTime = getPreviousTotalActualTime(firstZeroBand);
-    
-  time_tds timeToDistribute = inCurrentTime - s_realStartTime - prevTotalTime;
-  
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Time to distribute %d", timeToDistribute);
-    
-  time_tds timeEachBand = timeToDistribute*100 / bandsToFilltimes100;
-  time_tds remaindertimes100 = timeToDistribute*100 % bandsToFilltimes100;
 
-  while (timeToDistribute>0) {
-    time_tds timeWithRoundUp = (remaindertimes100>0) ? (timeEachBand+1) : timeEachBand;
-    APP_LOG(APP_LOG_LEVEL_DEBUG, "Time With Round Up %d", timeWithRoundUp);
-    time_tds timeForBand = timeWithRoundUp > timeToDistribute ? timeToDistribute : timeWithRoundUp;
-    s_actualTimes[firstZeroBand] = timeForBand;
-    timeToDistribute -= timeForBand;  
-    remaindertimes100-=100;
-    firstZeroBand++;
- }
+  time_tds plannedTimeOverPeriod = 0;
+  for (int bandIndex = firstZeroBand; bandIndex <= inHighestBandToFillIn ; bandIndex++) {
+	  plannedTimeOverPeriod += s_countDownBand[bandIndex];
+  }
+  
+  time_tds prevTotalTime = getPreviousTotalActualTime(firstZeroBand);
+
+  time_tds timeToDistribute = inCurrentTime - s_realStartTime - prevTotalTime;
+
+  time_tds timeDistributed = 0;
+
+  for (int bandIndex = firstZeroBand; bandIndex <= inHighestBandToFillIn ; bandIndex++) {
+	  s_actualTimes[bandIndex] = timeToDistribute * s_countDownBand[bandIndex] / plannedTimeOverPeriod;
+	  timeDistributed += s_actualTimes[bandIndex];
+  }
+
+  time_tds roundingError = timeToDistribute - timeDistributed;
+
+  for (int bandIndex = inHighestBandToFillIn; bandIndex > (inHighestBandToFillIn - abs(roundingError)) ; bandIndex--) {
+  	  s_actualTimes[bandIndex] += roundingError > 0 ? 1 : -1;
+    }
 }
 
 void runningStartFn(time_tds inCurrentTime) {
 
   s_startTime += getRemaingAndBandTime(inCurrentTime, getTimeDeltaFn);
-    
+
   time_tds smallElapsed = 0;
   s_lastConfirmedBand = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, false);
     
@@ -485,7 +495,7 @@ void runningStartFn(time_tds inCurrentTime) {
     s_finishedOneSet = true;
     setPaused(inCurrentTime);
     return;
-  }        
+  }
   
   clearPaused();
 }
@@ -495,13 +505,13 @@ void initialsetStartFn(time_tds inCurrentTime) {
   s_startTime = inCurrentTime;
   s_realStartTime = inCurrentTime;
   clearPaused();
-  startFunctionP = &runningStartFn;
+  s_startFunctionP = &runningStartFn;
 }
 
 bool initialPausedFn(time_tds inCurrentTime) {
 
   setPaused(inCurrentTime);
-  pauseFunctionP = &clearPausedFn;
+  s_pauseFunctionP = &clearPausedFn;
   return true;
 }
 
@@ -511,7 +521,7 @@ bool clearPausedFn(time_tds inCurrentTime) {
   s_startTime += timeElapsedWhenPaused;
   s_realStartTime += timeElapsedWhenPaused;
   clearPaused();
-  pauseFunctionP = &initialPausedFn;
+  s_pauseFunctionP = &initialPausedFn;
   
   return false;
 }
@@ -536,13 +546,13 @@ void initDisplayTime() {
     s_actualTimes[bandIndex] = (time_tds)0;
   }
   
-  startFunctionP = &initialsetStartFn;
+  s_startFunctionP = &initialsetStartFn;
   
-  pauseFunctionP = &initialPausedFn;
+  s_pauseFunctionP = &initialPausedFn;
 }
 
 bool togglePaused(time_tds inCurrentTime) {
-  return (*pauseFunctionP)(inCurrentTime);
+  return (*s_pauseFunctionP)(inCurrentTime);
 }
 
 time_tds getCurrentPlannedLapTime(time_tds inCurrentTime) {
@@ -564,18 +574,17 @@ time_tds getCurrentRePlannedLapTime(time_tds inCurrentTime) {
   
   // If the diff time from planned is +ve then runner is late
   // and seconds have to be subtracted to get back on time.
-  time_tds timeDifferencetimes100 = -100 * getTimeDiffFromPlanned();
-      
+  
+  time_tds plannedTimeRemaining = 0;
+  for (int bandIt = bandIndex ; bandIt < s_countDownBands ; bandIt++) {
+	  plannedTimeRemaining += s_countDownBand[bandIt];
+  }
+
+  time_tds timeMakeUpThisBand = -getTimeDiffFromPlanned() * s_countDownBand[bandIndex] / plannedTimeRemaining;
+  
   int bandsRemaining = s_countDownBands - bandIndex;
-  
-  int bandsRemainingtimes100 = (bandsRemaining - 1)*100;
-  if (bandsRemainingtimes100<0) {bandsRemainingtimes100=0;}
-  
-  bandsRemainingtimes100 += (bandsRemaining == 1) ? 100 : s_lastBandPercentOfMax;
-  
-  time_tds timeMakeUpThisBand = timeDifferencetimes100 / bandsRemainingtimes100;
     
-  if ((bandsRemaining > 2) && (timeMakeUpThisBand < (time_tds)-20)) {
+  if ((bandsRemaining > 2) && (timeMakeUpThisBand < (time_tds)-200)) {
     // runner is not going to make it - instead return the original target
     return s_countDownBand[bandIndex];
   }
@@ -643,6 +652,24 @@ time_tds getProjectedFinishTime(time_tds inCurrentTime) {
   return projectedFinishTime;
 }
 
+void addLap(time_tds inCurrentTime) {
+
+  time_tds smallElapsed = 0;
+  int bandIndex = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, false);
+
+  time_tds newLapTime = s_countDownBand[bandIndex] - smallElapsed;
+  s_countDownBands++;
+
+  for (int bandIt = s_countDownBands-1; bandIt > (bandIndex+1); bandIt--) {
+	  s_countDownBand[bandIt] = s_countDownBand[bandIt-1];
+  }
+
+  s_countDownBand[bandIndex] = smallElapsed;
+  s_countDownBand[bandIndex + 1] = newLapTime;
+
+  setStart(inCurrentTime);
+}
+
 time_tds getDisplayTimeFn(time_tds inRemainingTime, int inBandIndex) {
   
   // is the runner late getting to the split?
@@ -692,5 +719,6 @@ int getPercentCompleteTimes10(time_tds inCurrentTime) {
 
 void setStart(time_tds inCurrentTime) {
   
-  (*startFunctionP)(inCurrentTime);
+  (*s_startFunctionP)(inCurrentTime);
+
 }
