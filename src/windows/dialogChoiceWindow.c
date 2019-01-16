@@ -2,7 +2,7 @@
  * Example implementation of the dialog choice UI pattern.
  */
 
-#include "dialog_choice_window.h"
+#include "dialogChoiceWindow.h"
 
 static TextLayer *s_label_layer;
 static BitmapLayer *s_icon_layer;
