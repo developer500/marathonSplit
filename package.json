@@ -57,6 +57,18 @@
                     "name": "CONFIRM",
                     "targetPlatforms": null,
                     "type": "bitmap"
+                },
+                {
+                    "file": "images/replace.png",
+                    "name": "REPLACE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/whole.png",
+                    "name": "WHOLE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
                 }
             ]
         },
