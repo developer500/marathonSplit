@@ -100,67 +100,58 @@ bool testPaused(char* inOutStatusMessage) {
 	return true;
 }
 
+#define setStartFn 1
+#define noSet 0
+#define numberChecks 15
+
 bool testReset(char* inOutStatusMessage) {
 
-	time_tds testBands[3] = {70, 50, 30};
+	time_tds testBands[3] = {700, 500, 300};
+
+
+	time_tds expected[numberChecks][3] = {
+			{200, setStartFn, 70},  // This is equivalent to going back to start
+			{100, noSet, 60},
+			{400, noSet, 20},
+			{150, setStartFn, 0}, // This makes elapsed 650 - get to next band
+			{100, noSet, 40},
+			{100, noSet, 30},
+			{100, noSet, 20},
+			{100, noSet, 10},
+			{100, noSet, 0},
+			{10, noSet, -1},
+			{0, setStartFn, 0},
+			{100, noSet, 20},
+			{100, noSet, 10},
+			{100, noSet, 0},
+			{100, noSet, 60},
+	};
+
+
 	setCountDownBands(testBands, 3);
+
 
 	initDisplayTime();
 
 	time_t startTimet = (time_t)0x56c30f40;
 	time_tds startTime = getTimeDsFromTime(startTimet, 0);
-	setStart(startTime);
-
-	//// 2 seconds later do a rest - this is equivalent to pressing reset back to start - make sure
-	// the 0th actual time is not filled in.
-	startTime += 20;
-	setStart(startTime);
-	if (getDisplayTime(startTime) != 7) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 6) {return false;}
-
-	startTime += 40;
-	if (getDisplayTime(startTime) != 2) {return false;}
-
-	// This makes the elapsed time 65 which is enough to get to the next band
-	startTime += 15;
-	setStart(startTime);
-
-	if (getDisplayTime(startTime) != 0) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 4) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 3) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 2) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 1) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != 0) {return false;}
-
-	startTime += 10;
-	if (getDisplayTime(startTime) != -1) {return false;}
 
 	setStart(startTime);
-	if (getDisplayTime(startTime) != 0) {return false;}
 
-	startTime += 10;
-	if (getDisplayTime(startTime) != 2) {return false;}
+	for (int checkIndex = 0 ; checkIndex < numberChecks; checkIndex++) {
+		startTime += expected[checkIndex][0];
 
-	startTime += 10;
-	if (getDisplayTime(startTime) != 1) {return false;}
+		if (expected[checkIndex][1]==setStartFn) {
+			setStart(startTime);
+		}
 
-	startTime += 10;
-	if (getDisplayTime(startTime) != 0) {return false;}
+		int displayT = getDisplayTime(startTime);
 
-	startTime += 10;
-	if (getDisplayTime(startTime) != 6) {return false;}
+		if (displayT != expected[checkIndex][2]) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Check %d Expected %d but got %d", checkIndex, expected[checkIndex][2], displayT);
+			return false;
+		}
+	}
 
 	return true;
 }
@@ -258,7 +249,7 @@ bool testProjectedFinish(char* inOutStatusMessage) {
 
 bool testProjectedFinish2(char* inOutStatusMessage) {
 
-	time_tds testBands[3] = {100, 150, 200};
+	time_tds testBands[3] = {1000, 1500, 2000};
 	setCountDownBands(testBands, 3);
 
 	initDisplayTime();
@@ -267,8 +258,8 @@ bool testProjectedFinish2(char* inOutStatusMessage) {
 	time_tds startTime = getTimeDsFromTime(startTimet, 0);
 	setStart(startTime);
 
-	startTime += 120;
-	if (getDisplayTime(startTime) != 13) {return false;}
+	startTime += 1200;
+	if (getDisplayTime(startTime) != 130) {return false;}
 
 	// user presses start causing the clock to go backwards
 	setStart(startTime);
@@ -280,8 +271,7 @@ bool testProjectedFinish2(char* inOutStatusMessage) {
 	// The projected finish to go is
 	// 12 (so far) + 15 + 20 = 47
 
-	//APP_LOG(APP_LOG_LEVEL_DEBUG, "Projected Finish %d", (int)getProjectedFinishTime(startTime));
-	if (getProjectedFinishTime(startTime) != 470) {return false;}
+	if (getProjectedFinishTime(startTime) != 4700) {return false;}
 
 	return true;
 }
@@ -378,7 +368,7 @@ bool testCurrentReplannedLapTime2(char* inOutStatusMessage) {
 
 bool testCurrentReplannedLapTime3(char* inOutStatusMessage) {
 
-	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 250};
+	time_tds testBands[6] = {10000, 10000, 10000, 10000, 10000, 2500};
 
 	setCountDownBands(testBands, 6);
 
@@ -388,11 +378,11 @@ bool testCurrentReplannedLapTime3(char* inOutStatusMessage) {
 	time_tds startTime = getTimeDsFromTime(startTimet, 0);
 	setStart(startTime);
 
-	startTime += 5010;  // runner has almost finised
+	startTime += 50100;  // runner has almost finished
 	// but is 1 second behind schedule
 	setStart(startTime);
 
-	if (getCurrentRePlannedLapTime(startTime) != 240) { return false; }
+	if (getCurrentRePlannedLapTime(startTime) != 2400) { return false; }
 
 	return true;
 }
@@ -409,7 +399,7 @@ bool testDisplayMessage(char* inOutStatusMessage) {
 
 bool testRecordingSplitTimes(char* inOutStatusMessage) {
 
-	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 250};
+	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 2500};
 
 	setCountDownBands(testBands, 6);
 	initDisplayTime();
@@ -434,10 +424,12 @@ bool testRecordingSplitTimes(char* inOutStatusMessage) {
 	startTime += 260;
 	setStart(startTime);
 
-	time_tds expectedResults[6] = {901, 1050, 1006, 1007, 1007, 260};
+	time_tds expectedResults[6] = {901, 1050, 1006, 1007, 1007, 0};
 
 	for (int bandIndex = 0; bandIndex < 6; bandIndex++) {
 		if (getActualTime(bandIndex) != expectedResults[bandIndex]) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Check %d Expected %d but got %d", bandIndex, expectedResults[bandIndex], getActualTime(bandIndex));
+
 			return false;
 		}
 	}
@@ -677,7 +669,8 @@ bool testTimeCalculator(char* inOutStatusMessage) {
 
 	if (!testExisting(inOutStatusMessage)) { return false; }
 
-	//if (!testRoundingDown(inOutStatusMessage)) { return false; }
+
+	//strcpy(inOutStatusMessage, "failed");
 
 	//if (!testRecordingSplitTimes2(inOutStatusMessage)) { return false; }
 

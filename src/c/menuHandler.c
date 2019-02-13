@@ -159,6 +159,8 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
 
         mainBufferP += getTimeFromTimeT(s_showActualTines ? s_actualTime[cell_index->row] : s_plannedTime[cell_index->row], false, mainBufferP);
 
+        //snprintf(mainBufferP, 5, "%d", (int)(s_plannedTime[cell_index->row]));
+
         strcpy(mainBufferP, "   ");
         mainBufferP+=3;
 

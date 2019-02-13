@@ -320,20 +320,6 @@ static void set_action_icons(int inSystemState) {
 
 static void initData() {
 
-//    //time_tds tempBands[2] = {120, 100};
-//    //setTimeToPersist(tempBands, 2);
-//
-//	time_tds tempBands[7] = {
-//	  1210,
-//	  1879,
-//	  3161,
-//	  3807,
-//	  2617,
-//	  3798,
-//	  2660
-//	};
-//	setTimeToPersist(tempBands, 7);
-
 	char runName[50];
 
 	time_tds timeBands[MAX_BANDS];

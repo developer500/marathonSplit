@@ -14,31 +14,6 @@ static int s_lastConfirmedBand;
 static time_tds s_actualTimes[MAX_BANDS];
 
 
-// // //This is the Alameda Island Loop from the house
-// static int s_countDownBands = 20;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   3984, // Traffic lights at hbr parkway
-//   3307, // S Loop Road and HBR
-//   3247, // North Loop Road and HBR
-//   3665, // Ferry Terminal
-//   4041, // The Ship
-//   6285, // End of the trail at Vet Court
-//   3013, // High Street and Otis
-//   3759, // Park and Shoreline
-//   4326, // Grand and Shoreline
-//   5815, // Toilets at Crab Cove
-//   2599, // Central Ave
-//   4653, // Boat Ramp
-//   6214, // End of Sea Lagoon
-//   4097, // Tower and Monarch
-//   6580, // Ferry Terminal 2
-//   4499, // Stargel and Corral Sea 
-//   4015, // Atlantic and Webster
-//   3493, // Atlantic and Triumph
-//   4152, // Pacific and Paru
-//   5300  // Pacific and Park
-// };
-
 // //This is the Iron Horse Trail
 // static int s_countDownBands = 21;
 // static time_tds s_countDownBand[MAX_BANDS] = {
@@ -67,28 +42,6 @@ static time_tds s_actualTimes[MAX_BANDS];
 
 
 
-
-// //This is the MKL loop
-// static int s_countDownBands = 15;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   3620,   // to fedex road
-//   3550,   // to just before bart connector
-//   680,    // just under bart connector
-//   3440,   // to Dolittle
-//   3010,   // swan road
-//   4570,   // Toilets at MLK
-//   900,   // rest at Toilets
-//   4980,   // 2nd bridge
-//   4030,   // PG & E bridge
-//   2640,   // Toilets at boating place 
-//   100,    // rest at toilets
-//   2450,   // over the bridge
-//   2120,   // shoreline and east shore
-//   2125,   // just before lincoln
-//   2950   // Over the foot bridge 
-// };
-
-
 // This is the Loop from Regent
 static int s_countDownBands = 7;
 static time_tds s_countDownBand[MAX_BANDS] = {
@@ -101,123 +54,6 @@ static time_tds s_countDownBand[MAX_BANDS] = {
   2660
 };
 
-
-
-//// This is the HBR 6 mile timed run
-//static int s_countDownBands = 24;
-//static time_tds s_countDownBand[MAX_BANDS] = {
-//  1173,
-//  1173,
-//  1173,
-//  1122,
-//  1113,
-//  1113,
-//  1158,
-//  1143,
-//  1143,
-//  1129,
-//  1109,
-//  1108,
-//  1111,
-//  1111,
-//  1051,
-//  1139,
-//  1110,
-//  1110,
-//  1110,
-//  1110,
-//  1110,
-//  1110,
-//  1110,
-//  1110
-//};
-
-// static int s_countDownBands = 16;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110
-// };
-
-// static int s_countDownBands = 23;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-//   1110, 1110, 1110, 1110,
-// };
-
-
-// static int s_countDownBands = 32;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-//   1340, 1340, 1340, 1340,
-// };
-
-// static int s_countDownBands = 7;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  1200, 1200, 1200, 1200,
-//  1157, 1157, 1157
-// };
-
-
-// static int s_countDownBands = 26;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  5100, 5100, 4900, 4900,
-//  4900, 4900, 4900, 4900,
-//  4900, 4900, 4900, 4900,
-//  4900, 4900, 4900, 4900,
-//  4900, 4900, 4900, 4900,
-//  4900, 4900, 4900, 4900,
-//  4900, 4900, 5920
-// };
-
-
-// static int s_countDownBands = 27;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  4800, 4800, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 4630, 4630,
-//  4630, 4630, 930
-// };
-
-
-// static int s_countDownBands = 3;
-// static time_tds s_countDownBand[MAX_BANDS] = {150, 150, 150};
-
-//static int s_countDownBands = 10;
-//static time_tds s_countDownBand[MAX_BANDS] = {10,10,10,10,10,10,10,10,10,10};
-
-// static int s_countDownBands = 48;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 
-//  801,
-//  1335,
-  
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 1335, 1335, 1335,
-//  1335, 1335, 
-//  801,
-//  1335
-// };
 
 // static int s_countDownBands = 33;
 // static time_tds s_countDownBand[MAX_BANDS] = {
@@ -247,67 +83,6 @@ static time_tds s_countDownBand[MAX_BANDS] = {
 //  575, 575, 575, 575,     // 2 laps
 // };
 
-// static int s_countDownBands = 28;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1150, 1150, 1100, 1100,
-//   1100, 1100, 1100, 1100,
-//   1100, 1100, 1100, 1100,
-//   1100, 1100, 1100, 1100,
-//   1100, 1100, 1100, 1100,
-//   1100, 1100, 1100, 1100,
-//   1100, 1100, 1100, 1100
-// };
-
-// static int s_countDownBands = 15;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1055, 1322, 1322,
-//   1322, 1055, 1322, 1322,
-//   1200, 1055, 1200, 1200,
-//   1200, 1200, 1200, 1055,
-// };
-
-// static int s_countDownBands = 24;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   1200, 1200, 1200, 1200,
-//   1200, 1200, 1200, 1200,
-//   1200, 1200, 1200, 1200,
-//   1200, 1200, 1200, 1200,
-//   1200, 1200, 1200, 1200,
-//   1200, 1200, 1200, 1200,
-// };
-
-//                                                    463, 463, 463, 463, 463, 463, 463,
-//                                                    458, 458, 458, 458, 458, 458, 458, 458,
-//                                                    451, 451, 451, 451, 451, 451, 451, 451, 451,
-//                                                    96};
-
-//static int s_countDownBands = 14;
-//static time_tds s_countDownBand[MAX_BANDS] = {460, 460, 440, 440, 440,
-//                                                    440, 440, 440, 440, 440,
-//                                                    440, 440, 440, 48};
-//static int s_countDownBands = 8;
-//static time_tds s_countDownBand[MAX_BANDS] = {134,134,134,134,
-//                                                    134,134,134,134};
-
-/*
-static int s_countDownBands = 28;
-static time_tds s_countDownBand[MAX_BANDS] = {115,115,110,110,
-                                                   134,134,134,134,
-                                                   134,134,134,134,
-                                                   134,134,134,134,
-                                                   134,134,134,134,
-                                                   134,134,134,134,
-                                                   134,134,134,134,
-                                                   134};
-static int s_countDownBands = 26;
-static time_tds s_countDownBand[MAX_BANDS] = {116, 116, 111, 111,
-                                                   134, 134, 134, 134,
-                                                   134, 134, 134, 134,
-                                                   134, 134, 134, 134,
-                                                   134, 134, 134, 134,
-                                                   134, 134, 134, 134,
-                                                   134, 134};
-*/
 
 static time_tds s_totalBandTime;
 
@@ -358,7 +133,7 @@ time_tds getElapsedTime(time_tds inCurrentTime) {
 int getCurrrentBandAndSmallElapsed(time_tds inCurrentTime, time_tds* inOutSmallElapsd, bool inRoundForwards) {
   
   time_tds smallelapsedTime = getElapsedTime(inCurrentTime);  
-  
+
   time_tds roundedTotalBandTime = s_totalBandTime * (smallelapsedTime / s_totalBandTime);
 
   smallelapsedTime -= smallelapsedTime > roundedTotalBandTime ? roundedTotalBandTime : 0;
@@ -400,13 +175,41 @@ time_tds getRemaingAndBandTime(time_tds inCurrentTime, time_tds (*inFunction)(ti
   return inFunction(remainingTime, bandIndex);
 }
 
+// If a runner is within this # of sec of the next band then jump forwards
+time_tds getMinimumJumpForwardTime(time_tds inCurrentBandTime) {
+
+	// either 15 % or 25 sec which ever is bigger
+	const time_tds ydSeconds = 250;
+
+	const int lowPercent = 15;
+	const int highPercent = 50;
+
+	time_tds lowTime = inCurrentBandTime * lowPercent/ 100;
+	time_tds highTime = inCurrentBandTime * highPercent / 100;
+
+	time_tds retTime = lowTime;
+
+	if (lowTime < ydSeconds) {
+		retTime = ydSeconds;
+
+		if (ydSeconds > highTime) {
+			retTime = highTime;
+		}
+	}
+
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "CurBand %d low %d high %d ret %d", inCurrentBandTime, lowTime, highTime, retTime);
+
+	return retTime;
+}
+
 time_tds getTimeDeltaFn(time_tds inRemainingTime, int inBandIndex) {
 
   time_tds deltaTime;
 
   time_tds currentBandTime = s_countDownBand[inBandIndex];
 
-  if (inRemainingTime <= (currentBandTime / 10)) {
+  if (inRemainingTime <= getMinimumJumpForwardTime(currentBandTime)) {
+  //if (inRemainingTime <= (currentBandTime / 15)) {
     // jump forwards
     deltaTime = -1 * inRemainingTime;
   } else {
@@ -487,7 +290,7 @@ void runningStartFn(time_tds inCurrentTime) {
 
   time_tds smallElapsed = 0;
   s_lastConfirmedBand = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, false);
-    
+
   populateActualTimes(inCurrentTime, s_lastConfirmedBand);
   
   // Did the user press reset which caused the clock to jump forwards and finish the set?

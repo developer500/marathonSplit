@@ -29,12 +29,17 @@ void updateTimes(time_tds (*funcPtr)(time_tds inActualTime, time_tds inPlannedTi
 		timeSaved += (plannedTime - newTimes[bandIndex]);
 	}
 
-	setTimeToPersist(newTimes, numberBands, "default", 1);
+	setTimeToPersist(newTimes, numberBands, "default", 0);
 
 	char mainBuffer[50];
 	char* mainBufferp = mainBuffer;
 
-	strcpy(mainBufferp, "Improved ");
+	if (timeSaved < 0) {
+		strcpy(mainBufferp, "Lost     ");
+	} else {
+		strcpy(mainBufferp, "Improved ");
+	}
+
 	mainBufferp+=9;
 
 	getTimeFromTimeT(timeSaved, false, mainBufferp);
