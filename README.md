@@ -10,8 +10,6 @@ Seconds remaining this lap, and the number of laps are displayed.
 The ball around the outside makes 1 tour of the watch face per lap giving you a quick
 way to check progress.
 
-![summary](demo2.png)
-
 At the end of the race, a nice display showing planned vs actual times
 
 ![split](demo3.gif)
