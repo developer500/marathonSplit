@@ -12,7 +12,7 @@ const uint32_t data_stored_key_offset = 2;
 
 int getTimeFromDefault(time_tds * inOutBandPtr,char * inOutRunName) {
 
-	int numBands = 75;
+	int numBands = 1;
 
 //	int numBands = 72;
 //	time_tds countDownBand[MAX_BANDS] = {
@@ -39,7 +39,7 @@ int getTimeFromDefault(time_tds * inOutBandPtr,char * inOutRunName) {
 
 	for (int index = 0; index < numBands; index++, inOutBandPtr++) {
 		//*inOutBandPtr = countDownBand[index];
-		*inOutBandPtr = 1180;
+		*inOutBandPtr = 24000;
 	}
 
 	strcpy(inOutRunName, "Default");

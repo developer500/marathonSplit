@@ -1,88 +1,18 @@
 #include <pebble.h>
 #include "timeCalculator.h"
 
+// Rollover happens when doing laps and there is 1 time band
+// no rollover is like a race multiple bands
+static bool s_noRollover = true;
+
 static time_tds s_startTime;
 static time_tds s_realStartTime;
 static time_tds s_pauseTime;
 
-
-static bool s_finishedOneSet;
-static time_tds s_waitAfterFinish = (time_tds)20;  // wait 20 seconds after the projected finish to assume the set has finished
-
-static int s_lastConfirmedBand;
-
 static time_tds s_actualTimes[MAX_BANDS];
 
-
-// //This is the Iron Horse Trail
-// static int s_countDownBands = 21;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//   2905,
-//   6318,
-//   300,
-//   4320,
-//   9381,
-//   569,
-//   6349,
-//   300,
-//   8597,
-//   4277,
-//   300,
-//   4839,
-//   8285,
-//   5675,
-//   4848,
-//   7174, 
-//   300,
-//   5865,
-//   300,
-//   4487,
-//   3999
-// };
-
-
-
-// This is the Loop from Regent
-static int s_countDownBands = 7;
-static time_tds s_countDownBand[MAX_BANDS] = {
-  1210,
-  1879,
-  3161,
-  3807,
-  2617,
-  3798,
-  2660
-};
-
-
-// static int s_countDownBands = 33;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
-//  668,                        // 200 m recovery
-//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
-//  668,                        // 200 m recovery
-//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
-//  668,                        // 200 m recovery
-//  538, 538, 538, 538, 538,    // 2.5 laps = 1000m @  4:29 for 1000 = 2690sec = 2690/5 = 538 for 200m
-
-//  490, 490, 490, 490,         // 2 laps = 800m @  4:07 for 1000 = 1960sec = 1960/4 = 490 for 200m
-//  1336,                       // 400 m recovery
-
-//  490, 490, 490, 490,         // 2 laps = 800m @  4:07 for 1000 = 1960sec = 1960/4 = 490 for 200m
-//  1336,                       // 400 m recovery
-// };
-
-// static int s_countDownBands = 19;
-// static time_tds s_countDownBand[MAX_BANDS] = {
-//  575, 575, 575, 575,     // 2 laps
-//  900,                    // 200 m recovery
-//  575, 575, 575, 575,     // 2 laps
-//  900,                    // 200 m recovery
-//  575, 575, 575, 575,     // 2 laps
-//  900,                    // 200 m recovery
-//  575, 575, 575, 575,     // 2 laps
-// };
-
+static int s_countDownBands = 0;
+static time_tds s_countDownBand[MAX_BANDS];
 
 static time_tds s_totalBandTime;
 
@@ -111,12 +41,34 @@ void setCountDownBands(time_tds countDownBandPtr[], int inNumBands) {
   }
 }
 
+void setRollover(bool inHasRollover) {
+  s_noRollover = !inHasRollover;
+}
+
 bool getIsStarted() {
   return s_startTime != 0;
 }
 
 bool getIsPaused() {
   return s_pauseTime != 0;
+}
+
+int getIndexOfFirstZeroActualTime() {
+  
+  for (int bandIndex = 0; bandIndex < MAX_BANDS ; bandIndex++) {
+    if (s_actualTimes[bandIndex]==(time_tds)0) {
+      return bandIndex;
+    }
+  }
+  // could not be found.
+  return -1;
+}
+
+int getIndexOfLastConfirmedBand() {
+
+  int firstZeroActualBand = getIndexOfFirstZeroActualTime();
+
+  return firstZeroActualBand == -1 ? firstZeroActualBand : firstZeroActualBand -1;
 }
 
 time_tds getElapsedTime(time_tds inCurrentTime) {
@@ -130,26 +82,40 @@ time_tds getElapsedTime(time_tds inCurrentTime) {
   return absoluteCurrentTime - s_startTime;                // eg 0:00:12  - 12 seconds since start was pressed.
 }
 
+time_tds getEstimatedBandTime(int inBandIndex) {
+  return s_actualTimes[inBandIndex] == 0 ? s_countDownBand[inBandIndex] : s_actualTimes[inBandIndex];
+}
+
 int getCurrrentBandAndSmallElapsed(time_tds inCurrentTime, time_tds* inOutSmallElapsd, bool inRoundForwards) {
   
-  time_tds smallelapsedTime = getElapsedTime(inCurrentTime);  
-
-  time_tds roundedTotalBandTime = s_totalBandTime * (smallelapsedTime / s_totalBandTime);
-
-  smallelapsedTime -= smallelapsedTime > roundedTotalBandTime ? roundedTotalBandTime : 0;
+  time_tds smallelapsedTime = getElapsedTime(inCurrentTime); 
 
   int bandIndex = 0;
 
-  while (smallelapsedTime > s_countDownBand[bandIndex]) {
-    smallelapsedTime -= s_countDownBand[bandIndex];
+  time_tds estimatedBandTime = getEstimatedBandTime(bandIndex);
+  while (smallelapsedTime >= estimatedBandTime) {
     bandIndex++;
+    if (bandIndex==s_countDownBands) {
+      if (s_noRollover) {
+        bandIndex--;
+        break;
+      }
+    }
     bandIndex %= s_countDownBands;
+    smallelapsedTime -= estimatedBandTime;
+    estimatedBandTime = getEstimatedBandTime(bandIndex);
   }
   
   if (inRoundForwards) {
-    if (smallelapsedTime == s_countDownBand[bandIndex]) {
+    if (smallelapsedTime == getEstimatedBandTime(bandIndex)) {
       bandIndex++;
-      bandIndex %= s_countDownBands;
+      if (bandIndex >= s_countDownBands) {
+        if (s_noRollover) {
+          bandIndex--;
+        } else {
+          bandIndex %= s_countDownBands;
+        }
+      }
     }
   }
   
@@ -170,7 +136,10 @@ time_tds getRemaingAndBandTime(time_tds inCurrentTime, time_tds (*inFunction)(ti
   time_tds currentBandTime = s_countDownBand[bandIndex];
 
   // if the bands are {4,3} then at t=0,7,14 elapsed will be 0 - when this happens make remaining 0
-  time_tds remainingTime = currentBandTime - smallElapsed;  
+  time_tds remainingTime = currentBandTime - smallElapsed;
+
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "Band >%d< Remaining >%d<", bandIndex,remainingTime ); 
+	  
 
   return inFunction(remainingTime, bandIndex);
 }
@@ -197,26 +166,25 @@ time_tds getMinimumJumpForwardTime(time_tds inCurrentBandTime) {
 		}
 	}
 
-	//APP_LOG(APP_LOG_LEVEL_DEBUG, "CurBand %d low %d high %d ret %d", inCurrentBandTime, lowTime, highTime, retTime);
-
 	return retTime;
 }
 
-time_tds getTimeDeltaFn(time_tds inRemainingTime, int inBandIndex) {
-
-  time_tds deltaTime;
+bool shouldJumpForwards(time_tds inSmallElapsed, int inBandIndex) {
 
   time_tds currentBandTime = s_countDownBand[inBandIndex];
 
-  if (inRemainingTime <= getMinimumJumpForwardTime(currentBandTime)) {
-  //if (inRemainingTime <= (currentBandTime / 15)) {
-    // jump forwards
-    deltaTime = -1 * inRemainingTime;
-  } else {
-    deltaTime = currentBandTime - inRemainingTime;
+  time_tds remainingTime = currentBandTime - inSmallElapsed;
+
+  if (remainingTime <= getMinimumJumpForwardTime(currentBandTime)) {
+    return true;
   }
 
-  return deltaTime;
+  if ((inBandIndex == (getIndexOfLastConfirmedBand() + 1)) && (inSmallElapsed > 200) ) {
+    // within 20 seconds
+    return true;
+  } 
+  
+  return false;
 }
 
 void setPaused(time_tds inCurrentTime) {
@@ -227,75 +195,75 @@ void clearPaused() {
   s_pauseTime = 0;
 }
 
-int getIndexOfFirstZeroActualTime() {
-  
-  for (int bandIndex = 0; bandIndex < MAX_BANDS ; bandIndex++) {
-    if (s_actualTimes[bandIndex]==(time_tds)0) {
-      return bandIndex;
-    }
-  }
-  // could not be found.
-  return -1;
-}
-
-time_tds getPreviousTotalActualTime(int inFirstZeroBandIndex) {
-  
-  time_tds retTime = (time_tds)0;
-  for (int bandIndex = 0; bandIndex < inFirstZeroBandIndex ; bandIndex++) {
-    retTime += s_actualTimes[bandIndex];
-  }
-  
-  return retTime;
-}
-
-void populateActualTimes(time_tds inCurrentTime, int inHighestBandToFillIn) {
+void populateActualTimes(time_tds inCurrentTime, time_tds inSmallElapsed, int inCurrentBand) {
     
   int firstZeroBand = getIndexOfFirstZeroActualTime();
   if (firstZeroBand==-1) {
-    return;
-  }
-  
-  int bandsToFill = (inHighestBandToFillIn - firstZeroBand + 1);
-  if (bandsToFill<=0) {
-    // this happens if the user presses start button twice in short time.
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Tried to populate actual times with no 1st zero band");
     return;
   }
 
-  time_tds plannedTimeOverPeriod = 0;
-  for (int bandIndex = firstZeroBand; bandIndex <= inHighestBandToFillIn ; bandIndex++) {
-	  plannedTimeOverPeriod += s_countDownBand[bandIndex];
-  }
-  
-  time_tds prevTotalTime = getPreviousTotalActualTime(firstZeroBand);
+  bool jumpForwards = shouldJumpForwards(inSmallElapsed, inCurrentBand);
 
-  time_tds timeToDistribute = inCurrentTime - s_realStartTime - prevTotalTime;
+  if (!jumpForwards) {
+    if ((firstZeroBand == 0) && (inCurrentBand==0)) {
+      // The user pressed start then pressed start again quickly
+      s_startTime = inCurrentTime;
+      return;
+    }
+
+    if (inCurrentBand == firstZeroBand) {
+      // Pressed start twice after crossing a band..
+      s_actualTimes[inCurrentBand-1] += inSmallElapsed;
+      return;
+    }
+  }
+
+  time_tds timeToDistribute = 0;
+  int bandIndex = 0;
+  for (bandIndex = firstZeroBand; bandIndex < inCurrentBand ; bandIndex++) {
+	  timeToDistribute += s_countDownBand[bandIndex];
+  }
+  time_tds plannedTimeOverPeriod = timeToDistribute + (jumpForwards ? s_countDownBand[inCurrentBand] : 0);
+  timeToDistribute += inSmallElapsed;
+
+  // Jumping forwards means the current band is actually the next band.
+  inCurrentBand += (jumpForwards ? 1 : 0);
+  int lastBand = inCurrentBand -1;
 
   time_tds timeDistributed = 0;
 
-  for (int bandIndex = firstZeroBand; bandIndex <= inHighestBandToFillIn ; bandIndex++) {
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "======== Planned time over period >%d< %d", plannedTimeOverPeriod, timeToDistribute);
+
+  for (bandIndex = firstZeroBand; bandIndex <= lastBand; bandIndex++) {
 	  s_actualTimes[bandIndex] = timeToDistribute * s_countDownBand[bandIndex] / plannedTimeOverPeriod;
 	  timeDistributed += s_actualTimes[bandIndex];
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "Actual >%d< distributed >%d<", bandIndex, s_actualTimes[bandIndex]);
   }
 
   time_tds roundingError = timeToDistribute - timeDistributed;
 
-  for (int bandIndex = inHighestBandToFillIn; bandIndex > (inHighestBandToFillIn - abs(roundingError)) ; bandIndex--) {
-  	  s_actualTimes[bandIndex] += roundingError > 0 ? 1 : -1;
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "Rounding %d", roundingError);
+
+  for (bandIndex = lastBand; bandIndex > (lastBand - abs(roundingError)) ; bandIndex--) {
+      time_tds roundingThisBand = roundingError > 0 ? 1 : -1;
+      APP_LOG(APP_LOG_LEVEL_DEBUG, "Added %d to band %d", roundingThisBand, bandIndex);
+  	  s_actualTimes[bandIndex] += roundingThisBand;
     }
 }
 
 void runningStartFn(time_tds inCurrentTime) {
 
-  s_startTime += getRemaingAndBandTime(inCurrentTime, getTimeDeltaFn);
-
   time_tds smallElapsed = 0;
-  s_lastConfirmedBand = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, false);
-
-  populateActualTimes(inCurrentTime, s_lastConfirmedBand);
   
+  int currentBand = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, false);
+
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "Current >%d< small Elapsed >%d< last confirmed >%d<", inCurrentTime, smallElapsed, currentBand);
+
+  populateActualTimes(inCurrentTime, smallElapsed, currentBand);
+ 
   // Did the user press reset which caused the clock to jump forwards and finish the set?
   if (getElapsedTime(inCurrentTime) >= s_totalBandTime) {
-    s_finishedOneSet = true;
     setPaused(inCurrentTime);
     return;
   }
@@ -304,7 +272,7 @@ void runningStartFn(time_tds inCurrentTime) {
 }
 
 void initialsetStartFn(time_tds inCurrentTime) {
-    
+  
   s_startTime = inCurrentTime;
   s_realStartTime = inCurrentTime;
   clearPaused();
@@ -339,10 +307,7 @@ void initDisplayTime() {
   s_realStartTime = 0;
   s_pauseTime = 0;
 
-  s_finishedOneSet = false;
   s_totalBandTime = 0;
-  
-  s_lastConfirmedBand = -1;
 
   for (int bandIndex = 0; bandIndex < s_countDownBands; bandIndex++) {
     s_totalBandTime += s_countDownBand[bandIndex];
@@ -367,38 +332,16 @@ time_tds getCurrentPlannedLapTime(time_tds inCurrentTime) {
 }
 
 time_tds getTimeDiffFromPlanned() {
-  return (s_startTime - s_realStartTime);
-}
 
-time_tds getCurrentRePlannedLapTime(time_tds inCurrentTime) {
-  
-  time_tds smallElapsed = 0;
-  int bandIndex = getCurrrentBandAndSmallElapsed(inCurrentTime, &smallElapsed, true);
-  
-  // If the diff time from planned is +ve then runner is late
-  // and seconds have to be subtracted to get back on time.
-  
-  time_tds plannedTimeRemaining = 0;
-  for (int bandIt = bandIndex ; bandIt < s_countDownBands ; bandIt++) {
-	  plannedTimeRemaining += s_countDownBand[bandIt];
+  time_tds plannedTime = 0;
+  time_tds actualTime = 0;
+
+  for (int bandIndex = 0; bandIndex < s_countDownBands ; bandIndex++) {
+    plannedTime += s_countDownBand[bandIndex];
+    actualTime += s_actualTimes[bandIndex];
   }
 
-  time_tds timeMakeUpThisBand = -getTimeDiffFromPlanned() * s_countDownBand[bandIndex] / plannedTimeRemaining;
-  
-  int bandsRemaining = s_countDownBands - bandIndex;
-    
-  if ((bandsRemaining > 2) && (timeMakeUpThisBand < (time_tds)-200)) {
-    // runner is not going to make it - instead return the original target
-    return s_countDownBand[bandIndex];
-  }
-  
-  time_tds newReplannedLapTime = s_countDownBand[bandIndex] + timeMakeUpThisBand;
-
-  if (newReplannedLapTime < 0) {
-    return s_countDownBand[bandIndex];
-  }
-  
-  return newReplannedLapTime;
+  return (actualTime - plannedTime);
 }
 
 int getCountDownBand(time_tds inCurrentTime) {
@@ -420,26 +363,14 @@ time_tds getRealElapsedTime(time_tds inCurrentTime) {
 }
 
 bool getIsFinished(time_tds inCurrentTime) {
-  
-  if (s_finishedOneSet) {
+
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "GetIndex %d sCountDown %d", getIndexOfFirstZeroActualTime(), s_countDownBands);
+
+  if (getIndexOfFirstZeroActualTime() == s_countDownBands) {
     return true;
   }
-  
-  if (!getIsStarted()) {
-    return false;
-  }
-  
-  if (getElapsedTime(inCurrentTime) >= (s_totalBandTime + s_waitAfterFinish)) {
-    // This causes it to be finished
-    setStart(inCurrentTime);
-    return true;
-  }    
   
   return false;
-}
-
-time_tds getTotalTime() {
-  return s_totalBandTime + getTimeDiffFromPlanned();
 }
 
 time_tds getProjectedFinishTime(time_tds inCurrentTime) {
@@ -477,7 +408,7 @@ time_tds getDisplayTimeFn(time_tds inRemainingTime, int inBandIndex) {
   
   // is the runner late getting to the split?
   if (inBandIndex > 0) {
-    if ((inBandIndex-1) > s_lastConfirmedBand) {
+    if ((inBandIndex-1) > getIndexOfLastConfirmedBand()) {
       time_tds currentBandTime = s_countDownBand[inBandIndex];
     
       time_tds smallElapsed = currentBandTime - inRemainingTime;
@@ -497,7 +428,7 @@ time_tds getDisplayTimeFn(time_tds inRemainingTime, int inBandIndex) {
     }
   }
 
-  return inRemainingTime;
+  return abs(inRemainingTime);
 }
 
 int getDisplayTime(time_tds inCurrentTime) {
@@ -505,7 +436,7 @@ int getDisplayTime(time_tds inCurrentTime) {
   time_tds retTime = getRemaingAndBandTime(inCurrentTime, getDisplayTimeFn);  
     
   //  return retTime>=0 ? retTime/10 : (retTime-9)/10;
-  return retTime/10;
+  return (retTime/10) % 1000;
 }
 
 time_tds getPercentCompleteTimes10Fn(time_tds inRemainingTime, int inBandIndex) {

@@ -165,8 +165,11 @@ static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuI
         mainBufferP+=3;
 
         if (s_showActualTines) {
-            getTimeFromTimeT(s_actualTime[cell_index->row] - s_plannedTime[cell_index->row]
-              , true, mainBufferP);
+        	time_t diff = s_actualTime[cell_index->row] - s_plannedTime[cell_index->row];
+        	int percent = 10000*diff/s_plannedTime[cell_index->row];
+        	snprintf(mainBufferP, 8, "%d pct", percent);
+        	//getTimeFromTimeT(s_actualTime[cell_index->row] - s_plannedTime[cell_index->row]
+            //    , true, mainBufferP);
         } else {
         	strcpy(mainBufferP, "   ");
         	//snprintf(mainBufferP, 4, "%d", (int)(s_plannedTime[cell_index->row]/10));

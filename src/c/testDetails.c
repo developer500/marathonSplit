@@ -10,6 +10,8 @@ bool basicStartStopTest(char* inOutStatusMessage) {
 	time_tds testBands[2] = {40, 30};
 	setCountDownBands(testBands, 2);
 
+	setRollover(true);
+
 	initDisplayTime();
 
 	// assume the race starts on 1Feb16 at 12pm
@@ -39,13 +41,15 @@ bool basicStartStopTest(char* inOutStatusMessage) {
 	if (getDisplayTime(startTime) != 1) {return false;}
 
 	startTime += 10;
-	if (getDisplayTime(startTime) != 0) {return false;}
+	if (getDisplayTime(startTime) != 4) {return false;}
 
 	startTime += 10;
 	if (getDisplayTime(startTime) != 3) {return false;}
 
 	startTime += 10;
 	if (getDisplayTime(startTime) != 2) {return false;}
+
+	setRollover(false);
 
 	return true;
 }
@@ -108,28 +112,26 @@ bool testReset(char* inOutStatusMessage) {
 
 	time_tds testBands[3] = {700, 500, 300};
 
-
 	time_tds expected[numberChecks][3] = {
 			{200, setStartFn, 70},  // This is equivalent to going back to start
 			{100, noSet, 60},
 			{400, noSet, 20},
-			{150, setStartFn, 0}, // This makes elapsed 650 - get to next band
+			{150, setStartFn, 50}, // This makes elapsed 650 - get to next band
 			{100, noSet, 40},
 			{100, noSet, 30},
 			{100, noSet, 20},
 			{100, noSet, 10},
 			{100, noSet, 0},
 			{10, noSet, -1},
-			{0, setStartFn, 0},
+			{0, setStartFn, 30},
 			{100, noSet, 20},
 			{100, noSet, 10},
-			{100, noSet, 0},
-			{100, noSet, 60},
+			{100, noSet, 0}, // The user has not pressed reset - they are at the end of the set.
+			{100, noSet, 10}, // 10 seconds since it should have been end of set
 	};
 
 
 	setCountDownBands(testBands, 3);
-
 
 	initDisplayTime();
 
@@ -139,6 +141,9 @@ bool testReset(char* inOutStatusMessage) {
 	setStart(startTime);
 
 	for (int checkIndex = 0 ; checkIndex < numberChecks; checkIndex++) {
+
+		APP_LOG(APP_LOG_LEVEL_DEBUG, "Check %d", checkIndex);
+
 		startTime += expected[checkIndex][0];
 
 		if (expected[checkIndex][1]==setStartFn) {
@@ -174,14 +179,18 @@ bool testFinish(char* inOutStatusMessage) {
 
 	// the above shows there are 2 seconds to go - but have to be within 1 sec to finish
 
-	// add 1.5 seconds - his makes it finish
+	// add 1.5 seconds - his makes it finish - so that was 145 seconds after the start
+	// this is the 1st press of the set start
 	startTime += 15;
 
 	setStart(startTime);
 
 	if (getIsFinished(startTime) != true) {return false;}
 
-	if (getTimeDiffFromPlanned() != -5) {return false;}
+	if (getTimeDiffFromPlanned() != -5) {
+		APP_LOG(APP_LOG_LEVEL_DEBUG, "Expected -5 but was %d", getTimeDiffFromPlanned());
+		return false;
+	}
 
 	return true;
 }
@@ -198,23 +207,27 @@ bool testFinishRound2(char* inOutStatusMessage) {
 	time_tds startTime = getTimeDsFromTime(startTimet, 0);
 	setStart(startTime);
 
-	//// After 46 user presses start - means they now have 4 extra second
+	//// After 46 seconds, user has 4 seconds to go on the 1st band
 	startTime += 460;
 	if (getDisplayTime(startTime) != 4) {return false;}
 
-	// now it goes back to 0
+	// user presses start - display time becomes 0 - jumps forward
 	setStart(startTime);
-	if (getDisplayTime(startTime) != 0) {return false;}
+	if (getDisplayTime(startTime) != 100) {return false;}
 
-	//// After 70 user presses start again - means they now have 30 extra seconds
+	//// After 70 more seconds, there will be 30 seconds left on the 2nd band
 	startTime += 700;
 	if (getDisplayTime(startTime) != 30) {return false;}
 
+	// user presses start - causes the set to end.
 	setStart(startTime);
 
-	if (getDisplayTime(startTime) != 0) {return false;}
+    // before pressing start the time was 30 - it is still 30...
+	if (getDisplayTime(startTime) != 30) {return false;}
 
-	if (getIsFinished(startTime) == true) {return false;}
+	// but now since the 1st band has been clicked the user must have jumoed
+	// forwards, so the clock is finished.
+	if (getIsFinished(startTime) != true) {return false;}
 
 	return true;
 }
@@ -236,7 +249,7 @@ bool testProjectedFinish(char* inOutStatusMessage) {
 	// user presses start causing the clock to go forwards
 
 	setStart(startTime);
-	if (getDisplayTime(startTime) != 0) {return false;}
+	if (getDisplayTime(startTime) != 15) {return false;}
 
 
 	// The projected finish to go is
@@ -266,7 +279,7 @@ bool testProjectedFinish2(char* inOutStatusMessage) {
 
 	getDisplayTime(startTime);
 
-	if (getDisplayTime(startTime) != 0) {return false;}
+	if (getDisplayTime(startTime) != 150) {return false;}
 
 	// The projected finish to go is
 	// 12 (so far) + 15 + 20 = 47
@@ -300,93 +313,6 @@ bool testProjectedFinish3(char* inOutStatusMessage) {
 	return true;
 }
 
-bool testCurrentReplannedLapTime(char* inOutStatusMessage) {
-
-	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 1000};
-
-	setCountDownBands(testBands, 6);
-
-	{
-		initDisplayTime();
-
-		time_t startTimet = (time_t)0x56c30f40;
-		time_tds startTime = getTimeDsFromTime(startTimet, 0);
-		setStart(startTime);
-
-		startTime += 900;  // runner is 10 sec ahead of schedule
-		//there are 5 laps to go
-		// meaning the next time should be 2 sec longer...
-
-		setStart(startTime);
-
-		if (getCurrentRePlannedLapTime(startTime) != 1020) { return false; }
-	}
-
-	{
-		initDisplayTime();
-
-		time_t startTimet = (time_t)0x56c30f40;
-		time_tds startTime = getTimeDsFromTime(startTimet, 0);
-		setStart(startTime);
-
-		startTime += 1100;  // runner is 10 sec behind of schedule
-		//there are 5 laps to go
-		// meaning the next time should be 2 sec longer...
-
-		setStart(startTime);
-
-		if (getCurrentRePlannedLapTime(startTime) != 980) { return false; }
-	}
-	return true;
-}
-
-bool testCurrentReplannedLapTime2(char* inOutStatusMessage) {
-
-	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 250};
-
-	setCountDownBands(testBands, 6);
-
-	initDisplayTime();
-
-	time_t startTimet = (time_t)0x56c30f40;
-	time_tds startTime = getTimeDsFromTime(startTimet, 0);
-	setStart(startTime);
-
-	startTime += 901;  // runner is 9.9 sec ahead of schedule
-	// 9.9 is the max ahead because the lap time is 100s
-	//there are 5 laps to go - but the last lap
-	//is only .25 of a regular lap. In total there is
-	// 4250 ds to go - so lap 2 gets 9.9 * 1000/4250 = 2.3 sec
-	// so the new replanned lap time is 1023 ds
-
-	setStart(startTime);
-
-	if (getCurrentRePlannedLapTime(startTime) != 1023) { return false; }
-
-	return true;
-}
-
-bool testCurrentReplannedLapTime3(char* inOutStatusMessage) {
-
-	time_tds testBands[6] = {10000, 10000, 10000, 10000, 10000, 2500};
-
-	setCountDownBands(testBands, 6);
-
-	initDisplayTime();
-
-	time_t startTimet = (time_t)0x56c30f40;
-	time_tds startTime = getTimeDsFromTime(startTimet, 0);
-	setStart(startTime);
-
-	startTime += 50100;  // runner has almost finished
-	// but is 1 second behind schedule
-	setStart(startTime);
-
-	if (getCurrentRePlannedLapTime(startTime) != 2400) { return false; }
-
-	return true;
-}
-
 bool testDisplayMessage(char* inOutStatusMessage) {
 
 	time_tds thisplannedTimes[6] = {35999, 6582, 6582, 6582, 6582, 6582};
@@ -399,6 +325,11 @@ bool testDisplayMessage(char* inOutStatusMessage) {
 
 bool testRecordingSplitTimes(char* inOutStatusMessage) {
 
+	time_t press1 = 901;
+	time_t press2 = 1050;
+	time_t press3 = 3020;
+	time_t press4 = 260;
+
 	time_tds testBands[6] = {1000, 1000, 1000, 1000, 1000, 2500};
 
 	setCountDownBands(testBands, 6);
@@ -409,22 +340,22 @@ bool testRecordingSplitTimes(char* inOutStatusMessage) {
 	setStart(startTime);
 
 	// 10 seconds early
-	startTime += 901;
+	startTime += press1;
 	setStart(startTime);
 
 	// 5 late
-	startTime += 1050;
+	startTime += press2;
 	setStart(startTime);
 
 	// 3 late and miss out 2 in the middle - note the subtle round down.
-	startTime += 3020;
+	startTime += press3;
 	setStart(startTime);
 
 	// finished.
-	startTime += 260;
+	startTime += press4;
 	setStart(startTime);
 
-	time_tds expectedResults[6] = {901, 1050, 1006, 1007, 1007, 0};
+	time_tds expectedResults[6] = {press1, press2, press3/3, 1+press3/3, 1+press3/3, press4};
 
 	for (int bandIndex = 0; bandIndex < 6; bandIndex++) {
 		if (getActualTime(bandIndex) != expectedResults[bandIndex]) {
@@ -485,7 +416,7 @@ bool testRecordingSplitTimes2(char* inOutStatusMessage) {
 
 bool testRoundingDown(char* inOutStatusMessage) {
 
-	time_tds testBands[2] = {500, 500};
+	time_tds testBands[2] = {500, 550};
 
 	setCountDownBands(testBands, 2);
 	initDisplayTime();
@@ -494,6 +425,7 @@ bool testRoundingDown(char* inOutStatusMessage) {
 	time_tds startTime = getTimeDsFromTime(startTimet, 0);
 	setStart(startTime);
 
+    // 
 	if (getDisplayTime(startTime) != 50) {return false;}
 
 	// 10 seconds early
@@ -502,8 +434,45 @@ bool testRoundingDown(char* inOutStatusMessage) {
 
 	APP_LOG(APP_LOG_LEVEL_DEBUG, "Get Display Time 1 %d", (int)getDisplayTime(startTime));
 
+    // They are now onto the next lap which is 55 seconds
+	if (getDisplayTime(startTime) != 55) {return false;}
 
-	if (getDisplayTime(startTime) != 0) {return false;}
+	return true;
+}
+
+bool testOverTime(char* inOutStatusMessage) {
+
+    time_t press1 = 350;
+	time_t press2 = 600;
+	time_t press3 = 1400;
+
+	time_tds testBands[2] = {400, 800};
+
+	setCountDownBands(testBands, 2);
+	initDisplayTime();
+
+	time_t startTimet = (time_t)0x56c30f40;
+	time_tds startTime = getTimeDsFromTime(startTimet, 0);
+	setStart(startTime);
+
+	startTime += press1;
+	setStart(startTime);
+
+	startTime += press2;
+	addLap(startTime);
+
+	startTime += press3;
+	setStart(startTime);
+
+	time_tds expectedResults[3] = {press1, press2, press3};
+
+	for (int bandIndex = 0; bandIndex < 3; bandIndex++) {
+		if (getActualTime(bandIndex) != expectedResults[bandIndex]) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Overtime Check %d Expected %d but got %d", bandIndex, expectedResults[bandIndex], getActualTime(bandIndex));
+
+			return false;
+		}
+	}
 
 	return true;
 }
@@ -559,7 +528,7 @@ bool testGetTimeStrings(char* inOutStatusMessage) {
 
 bool testAddLap1(char* inOutStatusMessage) {
 
-	time_tds testBands[6] = {200, 300, 500, 700};
+	time_tds testBands[4] = {200, 300, 500, 700};
 
 	setCountDownBands(testBands, 4);
 
@@ -621,7 +590,7 @@ bool testAddLap2(char* inOutStatusMessage) {
 	return true;
 }
 
-#define NUMBER_TESTS 19
+#define NUMBER_TESTS 17
 
 bool testExisting(char* inOutStatusMessage) {
 
@@ -637,9 +606,6 @@ bool testExisting(char* inOutStatusMessage) {
 			{"Test projected finish", &testProjectedFinish},
 			{"Test projected finish2", &testProjectedFinish2},
 			{"Test projected finish3", &testProjectedFinish3},
-			{"Test current re-planned lap time", &testCurrentReplannedLapTime},
-			{"Test current re-planned lap time2", &testCurrentReplannedLapTime2},
-			{"Test current re-planned lap time3", &testCurrentReplannedLapTime3},
 			{"Test get time strings", &testGetTimeStrings},
 			{"Test display message", &testDisplayMessage},
 			{"Test recording split times", &testRecordingSplitTimes},
@@ -648,6 +614,7 @@ bool testExisting(char* inOutStatusMessage) {
 			{"Test get Time strings", &testGetTimeStrings},
 			{"Test add Lap 1", &testAddLap1},
 			{"Test add Lap 2", &testAddLap2},
+			{"Test Over time", &testOverTime},
 	};
 
 	bool retval;
@@ -672,7 +639,7 @@ bool testTimeCalculator(char* inOutStatusMessage) {
 
 	//strcpy(inOutStatusMessage, "failed");
 
-	//if (!testRecordingSplitTimes2(inOutStatusMessage)) { return false; }
+	if (!testRoundingDown(inOutStatusMessage)) { return false; }
 
 	return true;
 }
